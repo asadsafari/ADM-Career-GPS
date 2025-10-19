@@ -1,4 +1,3 @@
-
 export interface ResourcesNeeded {
   time: string;
   budget: string;
@@ -79,4 +78,50 @@ export interface SkillDevelopmentTimeline {
     budget: string;
     certifications: string[];
   };
+}
+
+// Updated types for the Delivery Plan feature for more realism
+export type Swimlane = 'Governance & Approvals' | 'UX & Design' | 'Dependencies' | 'Squad A: Accounts & Payments' | 'Squad B: Onboarding & Profile';
+
+export interface PlanItem {
+  id: string;
+  swimlane: Swimlane;
+  name: string;
+  startSprint: number;
+  sprints: number;
+  type: 'Epic' | 'Milestone' | 'Task';
+  dependencies: string[];
+  description: string;
+  progress: number;
+}
+
+export type RaidType = 'Risk' | 'Assumption' | 'Issue' | 'Dependency';
+
+export interface RaidItem {
+  id: string;
+  type: RaidType;
+  description: string;
+  impact: 'High' | 'Medium' | 'Low';
+  action: string;
+  owner: string;
+  status: 'Active' | 'Mitigated' | 'Closed' | 'Validated' | 'Invalidated' | 'In Progress' | 'Done';
+}
+
+export type RagStatus = 'Green' | 'Amber' | 'Red';
+
+export interface SteerCoUpdate {
+  date: string;
+  ragStatus: RagStatus;
+  highlights: string[];
+  lowlights: string[];
+  newRisks: string[];
+  asks: string[];
+}
+
+export interface DeliveryPlanData {
+  title: string;
+  description: string;
+  items: PlanItem[];
+  raidLog: RaidItem[];
+  steerCoUpdates: SteerCoUpdate[];
 }
