@@ -1,15 +1,17 @@
 
 import React from 'react';
 
+type ViewType = 'wiki' | 'plan' | 'monteCarlo';
+
 interface HeaderProps {
-    view: 'wiki' | 'plan';
-    onViewChange: (view: 'wiki' | 'plan') => void;
+    view: ViewType;
+    onViewChange: (view: ViewType) => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({ view, onViewChange }) => {
   
-  const getButtonClass = (buttonView: 'wiki' | 'plan') => {
-    const baseClass = "px-4 py-2 rounded-md text-sm font-semibold transition-colors";
+  const getButtonClass = (buttonView: ViewType) => {
+    const baseClass = "px-4 py-2 rounded-md text-sm font-semibold transition-colors whitespace-nowrap";
     if(view === buttonView) {
         return `${baseClass} bg-brand-primary text-white shadow-sm`;
     }
@@ -31,6 +33,7 @@ export const Header: React.FC<HeaderProps> = ({ view, onViewChange }) => {
          <div className="flex items-center gap-2 bg-slate-100 p-1 rounded-lg">
            <button onClick={() => onViewChange('wiki')} className={getButtonClass('wiki')}>Skill Wiki</button>
            <button onClick={() => onViewChange('plan')} className={getButtonClass('plan')}>Example Delivery Plan</button>
+           <button onClick={() => onViewChange('monteCarlo')} className={getButtonClass('monteCarlo')}>Monte Carlo Simulator</button>
          </div>
 
         <div className="hidden md:block text-right border-l border-slate-200 pl-4 ml-2">
