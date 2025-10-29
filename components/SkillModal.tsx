@@ -83,8 +83,13 @@ export const SkillModal: React.FC<SkillModalProps> = ({ skill }) => {
           </Accordion>
            
           <Accordion title="اشتباهات رایج" defaultOpen={true}>
-              <ul className="list-disc pr-5 space-y-2 text-text-secondary">
-                  {skill.commonMistakes.map((mistake, index) => <li key={index}>{mistake}</li>)}
+              <ul className="space-y-4 text-text-secondary">
+                  {skill.commonMistakes.map((item, index) => (
+                      <li key={index}>
+                          <p className="font-semibold text-text-primary">❌ {item.mistake}</p>
+                          <p className="pr-6 mt-1 text-sm">{item.explanation}</p>
+                      </li>
+                  ))}
               </ul>
               <NoteTaker noteKey={`${skill.skillName}::Common Mistakes to Avoid`} />
           </Accordion>

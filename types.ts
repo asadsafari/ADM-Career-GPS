@@ -23,7 +23,7 @@ export interface Skill {
   proofPoints: string[];
   resourcesNeeded: ResourcesNeeded;
   realStoryExample: RealStoryExample;
-  commonMistakes: string[];
+  commonMistakes: { mistake: string; explanation: string }[];
   interviewQuestions: string[];
 }
 
