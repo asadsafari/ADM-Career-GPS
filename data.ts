@@ -2,1375 +2,887 @@
 import { Skill, CareerLevel, LevelRequirements, CareerPathway, JobPostingExample, SkillDevelopmentTimeline } from './types';
 
 export const allSkills: Skill[] = [
+  // --- چارچوب‌ها و متدولوژی‌های چابک ---
   {
-    "skillName": "Scrum Framework Mastery",
-    "category": "Agile Frameworks & Methodologies",
-    "marketDemand": "80-85%",
-    "skillType": "Must-Have",
+    "skillName": "تسلط بر چارچوب اسکرام",
+    "category": "چارچوب‌ها و متدولوژی‌های چابک",
+    "marketDemand": "۸۰-۸۵٪",
+    "skillType": "مهارت ضروری",
     "requiredForLevel": {
-      "entry": "4/5",
-      "mid": "5/5",
-      "senior": "5/5"
+      "entry": "۴/۵",
+      "mid": "۵/۵",
+      "senior": "۵/۵"
     },
     "whatItLooksLike": [
-      "Facilitates Daily Standup in under 15 minutes with 100% team participation and clear action items",
-      "Sprint Planning produces a sprint backlog that the team commits to with 90%+ completion rate",
-      "Retrospectives generate 3-5 actionable improvements per sprint with 80%+ follow-through",
-      "Adapts ceremony formats based on team maturity (e.g., uses silent writing for introverted teams)",
-      "Coaches Product Owner on effective backlog refinement resulting in 2 sprints of ready stories"
+      "جلسات روزانه (Daily Standup) را در کمتر از ۱۵ دقیقه با مشارکت ۱۰۰٪ تیم و موارد اقدام (Action Items) واضح، تسهیلگری می‌کند.",
+      "برنامه‌ریزی اسپرینت (Sprint Planning) منجر به یک بک‌لاگ اسپرینت می‌شود که تیم با نرخ تکمیل ۹۰٪+ به آن متعهد می‌شود.",
+      "جلسات مرور اسپرینت (Retrospectives) در هر اسپرینت ۳-۵ بهبود عملی با پیگیری ۸۰٪+ ایجاد می‌کند.",
+      "قالب‌های جلسات را بر اساس بلوغ تیم تطبیق می‌دهد (مثلاً، استفاده از نوشتن بی‌صدا برای تیم‌های درون‌گرا).",
+      "مالک محصول (Product Owner) را در مورد پالایش مؤثر بک‌لاگ کوچ می‌کند که منجر به آماده بودن استوری‌ها برای دو اسپرینت آینده می‌شود."
     ],
     "proofPoints": [
-      "Team velocity stabilizes within ±15% over 6 sprints",
-      "Sprint goal achievement rate reaches 85%+",
-      "Team satisfaction score for ceremonies is 8/10 or higher",
-      "Zero retrospective action items are carried over incomplete for 3+ sprints",
-      "Product Owner rates refinement effectiveness as 9/10 or higher",
-      "Can articulate when to break Scrum rules and why (shows mastery beyond rote application)"
+      "شتاب (Velocity) تیم در طی ۶ اسپرینت در محدوده ۱۵٪± تثبیت می‌شود.",
+      "نرخ دستیابی به اهداف اسپرینت به ۸۵٪+ می‌رسد.",
+      "امتیاز رضایت تیم از جلسات ۸ از ۱۰ یا بالاتر است.",
+      "هیچ مورد اقدام جلسه مرور برای ۳+ اسپرینت به صورت ناتمام باقی نمی‌ماند.",
+      "مالک محصول، اثربخشی پالایش بک‌لاگ را ۹ از ۱۰ یا بالاتر ارزیابی می‌کند.",
+      "قادر به توضیح زمان و دلیل شکستن قوانین اسکرام است (نشان‌دهنده تسلط فراتر از اجرای صرف قوانین)."
     ],
-    "resourcesNeeded": { "time": "100-150 hours over 6 months", "budget": "£1,000-2,000 / $1,200-2,500", "tools": ["Jira or similar", "Miro/Mural for virtual facilitation"], "support": "Access to experienced Scrum Master for mentorship" },
-    "realStoryExample": { "persona": "Sarah, Junior ADM at Financial Services Company", "challenge": "Team consistently missing sprint commitments (60% completion rate)", "action": "Redesigned sprint planning to include capacity calculation, risk assessment, and team-led commitment instead of PO-driven push", "result": "Completion rate improved to 92% over 4 sprints, team morale increased, PO trust rebuilt", "skillsUsed": ["Scrum Mastery", "Facilitation", "Servant Leadership"] },
+    "resourcesNeeded": { "time": "۱۰۰-۱۵۰ ساعت طی ۶ ماه", "budget": "۱,۰۰۰-۲,۰۰۰ پوند / ۱,۲۰۰-۲,۵۰۰ دلار", "tools": ["جیرا یا ابزار مشابه", "Miro/Mural برای تسهیلگری مجازی"], "support": "دسترسی به اسکرام مستر باتجربه برای مربیگری" },
+    "realStoryExample": { "persona": "سارا، ADM تازه‌کار در یک شرکت خدمات مالی", "challenge": "تیم به طور مداوم به تعهدات اسپرینت عمل نمی‌کرد (نرخ تکمیل ۶۰٪).", "action": "طراحی مجدد برنامه‌ریزی اسپرینت با در نظر گرفتن محاسبه ظرفیت، ارزیابی ریسک و تعهد تیمی به جای فشار از سوی مالک محصول.", "result": "نرخ تکمیل طی ۴ اسپرینت به ۹۲٪ بهبود یافت، روحیه تیم افزایش یافت و اعتماد مالک محصول بازسازی شد.", "skillsUsed": ["تسلط بر اسکرام", "تسهیلگری", "رهبری خدمتگزار"] },
     "commonMistakes": [
-      "Running ceremonies by the book without adapting to team context",
-      "Allowing Daily Standup to become status report to manager",
-      "Skipping retrospectives when team is 'too busy'",
-      "Not ensuring Definition of Done is actually followed",
-      "Treating Scrum Master as administrative role instead of leadership"
+      "اجرای جلسات طبق کتاب بدون تطبیق با زمینه تیم.",
+      "اجازه دادن به اینکه جلسه روزانه به گزارش وضعیت به مدیر تبدیل شود.",
+      "نادیده گرفتن جلسات مرور به دلیل «مشغله زیاد» تیم.",
+      "عدم اطمینان از رعایت واقعی «تعریف انجام‌شده» (Definition of Done).",
+      "نگاه کردن به اسکرام مستر به عنوان یک نقش اداری به جای یک نقش رهبری."
     ],
     "interviewQuestions": [
-      "How do you handle a team that consistently misses sprint commitments?",
-      "Describe a time when you had to adapt a Scrum ceremony. What did you change and why?",
-      "How do you ensure retrospectives lead to actual improvements?",
-      "What would you do if your Product Owner wants to add stories mid-sprint?"
+      "چگونه با تیمی که به طور مداوم به تعهدات اسپرینت خود عمل نمی‌کند، برخورد می‌کنید؟",
+      "زمانی را توصیف کنید که مجبور به تطبیق یک جلسه اسکرام شدید. چه چیزی را و چرا تغییر دادید؟",
+      "چگونه اطمینان حاصل می‌کنید که جلسات مرور منجر به بهبودهای واقعی می‌شوند؟",
+      "اگر مالک محصول بخواهد در اواسط اسپرینت استوری جدیدی اضافه کند، چه می‌کنید؟"
     ]
   },
   {
-    "skillName": "Kanban & Flow-Based Delivery",
-    "category": "Agile Frameworks & Methodologies",
-    "marketDemand": "60-70%",
-    "skillType": "Must-Have",
-    "requiredForLevel": { "entry": "2/5", "mid": "4/5", "senior": "4/5" },
+    "skillName": "کانبان و تحویل مبتنی بر جریان",
+    "category": "چارچوب‌ها و متدولوژی‌های چابک",
+    "marketDemand": "۶۰-۷۰٪",
+    "skillType": "مهارت ضروری",
+    "requiredForLevel": { "entry": "۲/۵", "mid": "۴/۵", "senior": "۴/۵" },
     "whatItLooksLike": [
-      "Designs Kanban board with optimal WIP limits that reduce cycle time by 30%+",
-      "Uses cumulative flow diagrams to identify bottlenecks before they become critical blockers",
-      "Implements classes of service (expedite, fixed date, standard, intangible) with clear policies",
-      "Measures and improves Flow Efficiency from 15% to 40%+ over 6 months",
-      "Transitions team from Scrum to Kanban when continuous flow is more appropriate than sprints"
+      "طراحی برد کانبان با محدودیت‌های بهینه کار در حال انجام (WIP limits) که زمان چرخه (cycle time) را ۳۰٪+ کاهش می‌دهد.",
+      "استفاده از نمودارهای جریان تجمعی (cumulative flow diagrams) برای شناسایی گلوگاه‌ها قبل از تبدیل شدن به موانع حیاتی.",
+      "پیاده‌سازی کلاس‌های خدمات (فوری، تاریخ معین، استاندارد، نامشهود) با سیاست‌های روشن.",
+      "اندازه‌گیری و بهبود کارایی جریان (Flow Efficiency) از ۱۵٪ به ۴۰٪+ طی ۶ ماه.",
+      "انتقال تیم از اسکرام به کانبان زمانی که جریان پیوسته مناسب‌تر از اسپرینت‌ها باشد."
     ],
     "proofPoints": [
-      "Average cycle time reduced by 25%+ over 3 months",
-      "Flow efficiency improved from <20% to >35%",
-      "Predictability achieved: 85% of items complete within forecasted timeframe",
-      "Team can articulate why WIP limits are at specific levels",
-      "Blockers identified and resolved 50% faster through flow metrics visibility"
+      "میانگین زمان چرخه طی ۳ ماه ۲۵٪+ کاهش یافته است.",
+      "کارایی جریان از کمتر از ۲۰٪ به بیش از ۳۵٪ بهبود یافته است.",
+      "دستیابی به قابلیت پیش‌بینی: ۸۵٪ از موارد در بازه زمانی پیش‌بینی‌شده تکمیل می‌شوند.",
+      "تیم می‌تواند توضیح دهد که چرا محدودیت‌های WIP در سطوح مشخصی قرار دارند.",
+      "موانع ۵۰٪ سریع‌تر از طریق دیداری‌سازی معیارهای جریان شناسایی و برطرف می‌شوند."
     ],
-    "resourcesNeeded": { "time": "80-100 hours over 4 months", "budget": "£1,000-1,800 / $1,200-2,200", "tools": ["Jira with advanced roadmaps", "ActionableAgile Analytics"], "support": "Kanban coach or experienced practitioner for guidance" },
-    "realStoryExample": { "persona": "Marcus, Mid-Level ADM at SaaS Company", "challenge": "Support team drowning in tickets, unpredictable delivery, constant context switching", "action": "Implemented Kanban with WIP limits (3 per person), expedite lane for critical bugs, and daily flow metrics review", "result": "Average resolution time dropped from 12 days to 5 days, team stress decreased, customer satisfaction up 35%", "skillsUsed": ["Kanban", "Flow Metrics", "Process Optimization"] },
+    "resourcesNeeded": { "time": "۸۰-۱۰۰ ساعت طی ۴ ماه", "budget": "۱,۰۰۰-۱,۸۰۰ پوند / ۱,۲۰۰-۲,۲۰۰ دلار", "tools": ["جیرا با advanced roadmaps", "ActionableAgile Analytics"], "support": "کوچ کانبان یا فردی باتجربه برای راهنمایی" },
+    "realStoryExample": { "persona": "مارکوس، ADM سطح میانی در یک شرکت SaaS", "challenge": "تیم پشتیبانی در تیکت‌ها غرق شده بود، تحویل غیرقابل پیش‌بینی بود و تغییر زمینه (context switching) مداوم وجود داشت.", "action": "پیاده‌سازی کانبان با محدودیت‌های WIP (۳ مورد برای هر نفر)، یک خط فوری برای باگ‌های حیاتی و بررسی روزانه معیارهای جریان.", "result": "میانگین زمان حل مشکل از ۱۲ روز به ۵ روز کاهش یافت، استرس تیم کم شد و رضایت مشتری ۳۵٪ افزایش یافت.", "skillsUsed": ["کانبان", "معیارهای جریان", "بهینه‌سازی فرآیند"] },
     "commonMistakes": [
-      "Setting WIP limits too high (no real constraint effect)",
-      "Not having explicit policies for each column",
-      "Treating Kanban as 'Scrum without sprints' instead of true flow system",
-      "Ignoring flow metrics and just using board as visual task list",
-      "Not addressing upstream issues that cause uneven work arrival"
+      "تنظیم محدودیت‌های WIP بیش از حد بالا (بدون تأثیر واقعی).",
+      "نداشتن سیاست‌های صریح برای هر ستون.",
+      "نگاه کردن به کانبان به عنوان «اسکرام بدون اسپرینت» به جای یک سیستم جریان واقعی.",
+      "نادیده گرفتن معیارهای جریان و استفاده از برد فقط به عنوان یک لیست وظایف بصری.",
+      "عدم رسیدگی به مشکلات بالادستی که باعث ورود نامنظم کار می‌شوند."
     ],
     "interviewQuestions": [
-      "Explain the difference between Scrum and Kanban. When would you use each?",
-      "How do you determine appropriate WIP limits for a team?",
-      "What is flow efficiency and why does it matter?",
-      "Walk me through how you'd transition a team from Scrum to Kanban."
+      "تفاوت بین اسکرام و کانبان را توضیح دهید. چه زمانی از هر کدام استفاده می‌کنید؟",
+      "چگونه محدودیت‌های WIP مناسب برای یک تیم را تعیین می‌کنید؟",
+      "کارایی جریان چیست و چرا اهمیت دارد؟",
+      "مراحل انتقال یک تیم از اسکرام به کانبان را برای من شرح دهید."
     ]
   },
   {
-    "skillName": "SAFe (Scaled Agile Framework)",
-    "category": "Agile Frameworks & Methodologies",
-    "marketDemand": "40-50% (GROWING)",
-    "skillType": "Essential for Enterprise",
-    "requiredForLevel": { "entry": "2/5", "mid": "3/5", "senior": "4/5" },
+    "skillName": "SAFe (چارچوب چابک مقیاس‌پذیر)",
+    "category": "چارچوب‌ها و متدولوژی‌های چابک",
+    "marketDemand": "۴۰-۵۰٪ (در حال رشد)",
+    "skillType": "حیاتی برای سازمان‌های بزرگ",
+    "requiredForLevel": { "entry": "۲/۵", "mid": "۳/۵", "senior": "۴/۵" },
     "whatItLooksLike": [
-      "Facilitates PI Planning event for 50-125 people resulting in aligned, committed objectives",
-      "Manages Program Board with 100+ dependencies across 8 teams, resolving conflicts in real-time",
-      "Coordinates Scrum of Scrums meetings that identify and remove cross-team blockers within 48 hours",
-      "Tracks program-level metrics (Features delivered, Program Predictability, Team Predictability)",
-      "Serves as Release Train Engineer managing entire Agile Release Train delivery cadence"
+      "تسهیلگری رویداد برنامه‌ریزی PI برای ۵۰-۱۲۵ نفر که منجر به اهداف همسو و متعهدانه می‌شود.",
+      "مدیریت برد برنامه (Program Board) با بیش از ۱۰۰ وابستگی در ۸ تیم و حل تعارضات به صورت آنی.",
+      "هماهنگی جلسات اسکرام اسکرام‌ها که موانع بین تیمی را طی ۴۸ ساعت شناسایی و برطرف می‌کند.",
+      "پیگیری معیارهای سطح برنامه (ویژگی‌های تحویل داده شده، قابلیت پیش‌بینی برنامه، قابلیت پیش‌بینی تیم).",
+      "ایفای نقش به عنوان مهندس قطار انتشار (RTE) و مدیریت کل چرخه تحویل قطار انتشار چابک (ART)."
     ],
     "proofPoints": [
-      "Successfully facilitated 2+ PI Planning events with 80%+ objective achievement",
-      "Program predictability measure reaches 80% or higher",
-      "Reduced inter-team dependencies by 25% through architectural improvements",
-      "ART velocity stabilizes within ±20% over 3 PIs",
-      "Can explain SAFe practices to executives and gain buy-in for transformation"
+      "تسهیلگری موفقیت‌آمیز بیش از ۲ رویداد برنامه‌ریزی PI با دستیابی به بیش از ۸۰٪ اهداف.",
+      "رسیدن معیار قابلیت پیش‌بینی برنامه به ۸۰٪ یا بالاتر.",
+      "کاهش ۲۵٪ وابستگی‌های بین تیمی از طریق بهبودهای معماری.",
+      "تثبیت شتاب ART در محدوده ۲۰٪± طی ۳ PI.",
+      "توانایی توضیح دادن شیوه‌های SAFe به مدیران اجرایی و جلب حمایت آن‌ها برای تحول."
     ],
-    "resourcesNeeded": { "time": "150-200 hours over 12 months", "budget": "£2,500-4,000 / $3,000-5,000", "tools": ["Jira Align or similar SAFe tool", "Miro for virtual PI Planning"], "support": "SAFe Program Consultant (SPC) for mentorship" },
-    "realStoryExample": { "persona": "Jennifer, Senior ADM at Enterprise Financial Institution", "challenge": "250-person technology division struggling with alignment, competing priorities, delivery delays", "action": "Led SAFe transformation: established 2 ARTs, facilitated first PI Planning, implemented Inspect & Adapt workshops", "result": "Time-to-market reduced 40%, predictability improved from 45% to 82%, employee engagement increased 28%", "skillsUsed": ["SAFe", "Change Management", "Strategic Alignment", "Facilitation"] },
+    "resourcesNeeded": { "time": "۱۵۰-۲۰۰ ساعت طی ۱۲ ماه", "budget": "۲,۵۰۰-۴,۰۰۰ پوند / ۳,۰۰۰-۵,۰۰۰ دلار", "tools": ["Jira Align یا ابزار مشابه SAFe", "Miro برای برنامه‌ریزی PI مجازی"], "support": "مشاور برنامه SAFe (SPC) برای مربیگری" },
+    "realStoryExample": { "persona": "جنیفر، ADM ارشد در یک موسسه مالی بزرگ", "challenge": "بخش فناوری ۲۵۰ نفره با مشکلات همسویی، اولویت‌های متناقض و تأخیر در تحویل مواجه بود.", "action": "رهبری تحول SAFe: ایجاد ۲ ART، تسهیلگری اولین برنامه‌ریزی PI، پیاده‌سازی کارگاه‌های بازرسی و تطبیق (Inspect & Adapt).", "result": "زمان عرضه به بازار ۴۰٪ کاهش یافت، قابلیت پیش‌بینی از ۴۵٪ به ۸۲٪ بهبود یافت و مشارکت کارکنان ۲۸٪ افزایش یافت.", "skillsUsed": ["SAFe", "مدیریت تغییر", "همسویی استراتژیک", "تسهیلگری"] },
     "commonMistakes": [
-      "Treating SAFe as heavyweight process instead of principles-based framework",
-      "Skipping Inspect & Adapt workshops due to 'lack of time'",
-      "Not involving architects and product management in PI Planning",
-      "Focusing on ceremonies without addressing organizational impediments",
-      "Implementing Full SAFe when Essential SAFe would suffice"
+      "نگاه کردن به SAFe به عنوان یک فرآیند سنگین به جای یک چارچوب مبتنی بر اصول.",
+      "نادیده گرفتن کارگاه‌های بازرسی و تطبیق به دلیل «کمبود وقت».",
+      "عدم مشارکت معماران و مدیران محصول در برنامه‌ریزی PI.",
+      "تمرکز بر جلسات بدون رسیدگی به موانع سازمانی.",
+      "پیاده‌سازی Full SAFe در حالی که Essential SAFe کافی است."
     ],
     "interviewQuestions": [
-      "What is a Program Increment and why does SAFe use this cadence?",
-      "How do you handle dependencies that emerge mid-PI?",
-      "Explain the difference between Essential SAFe and Full SAFe.",
-      "How would you measure the success of a PI Planning event?"
+      "یک Program Increment چیست و چرا SAFe از این چرخه استفاده می‌کند؟",
+      "چگونه وابستگی‌هایی را که در اواسط PI به وجود می‌آیند، مدیریت می‌کنید؟",
+      "تفاوت بین Essential SAFe و Full SAFe را توضیح دهید.",
+      "موفقیت یک رویداد برنامه‌ریزی PI را چگونه می‌سنجید؟"
+    ]
+  },
+    {
+    "skillName": "رویکردهای ترکیبی و انطباقی",
+    "category": "چارچوب‌ها و متدولوژی‌های چابک",
+    "marketDemand": "۵۰-۶۰٪",
+    "skillType": "بسیار ارزشمند",
+    "requiredForLevel": { "entry": "۲/۵", "mid": "۳/۵", "senior": "۴/۵" },
+    "whatItLooksLike": [
+      "اجرای موفقیت‌آمیز رویکرد 'اسکرام‌بان': اسکرام برای توسعه، کانبان برای عملیات در یک تیم.",
+      "تطبیق چارچوب بر اساس زمینه: استفاده از آبشاری برای فاز انطباق، چابک برای توسعه.",
+      "طراحی رویکرد تحویل سفارشی برای تیم یکپارچه‌سازی سخت‌افزار و نرم‌افزار.",
+      "توضیح انتخاب‌های چارچوب به رهبری با دلایل مبتنی بر داده.",
+      "کمک به سازمان برای انتقال از آبشاری به چابک با استفاده از یک رویکرد ترکیبی مرحله‌ای."
+    ],
+    "proofPoints": [
+      "تطبیق موفقیت‌آمیز رویکرد تحویل برای بیش از ۳ زمینه تیمی مختلف.",
+      "کاهش ۴۰٪ اصطکاک در انتقال با استفاده از رویکرد ترکیبی در مقابل تغییر ناگهانی.",
+      "توانایی توضیح دادن مزایا و معایب چارچوب‌ها به ذی‌نفعان (مثلاً، 'اسکرام قابلیت پیش‌بینی می‌دهد، کانبان جریان').",
+      "رضایت تیم از رویکرد انتخاب شده ۸ از ۱۰ یا بالاتر است.",
+      "بهبود ۲۰٪+ معیارهای تحویل پس از تطبیق چارچوب."
+    ],
+    "resourcesNeeded": { "time": "۱۰۰-۱۲۰ ساعت طی ۹ ماه", "budget": "۱,۵۰۰-۲,۲۰۰ پوند / ۱,۸۰۰-۲,۶۰۰ دلار", "tools": ["قالب‌های ماتریس مقایسه چارچوب", "جعبه ابزار مدیریت تغییر"], "support": "کوچ چابک باتجربه در چندین چارچوب" },
+    "realStoryExample": { "persona": "راج، ADM سطح میانی در یک شرکت تولیدی", "challenge": "تیم سخت‌افزار از آبشاری و تیم نرم‌افزار از اسکرام استفاده می‌کرد—اصطکاک دائمی در نقاط یکپارچه‌سازی.", "action": "طراحی یک رویکرد ترکیبی: سخت‌افزار از مدل مرحله-دروازه با نقاط بازرسی چابک استفاده می‌کند، نرم‌افزار از اسکرام با چرخه دموی هماهنگ.", "result": "نقص‌های یکپارچه‌سازی ۶۰٪ کاهش یافت، زمان عرضه به بازار ۲۵٪ بهبود یافت و همکاری بین عملکردی به شدت بهتر شد.", "skillsUsed": ["رویکردهای ترکیبی", "همکاری بین عملکردی", "طراحی فرآیند"] },
+    "commonMistakes": [
+      "ایجاد 'Wagile' (بدترین حالت از هر دو آبشاری و چابک).",
+      "تغییر رویکردها بیش از حد مکرر بدون اندازه‌گیری تأثیر.",
+      "عدم مستندسازی دلیل انتخاب یک رویکرد خاص.",
+      "فرض اینکه یک چارچوب برای همه انواع تیم‌ها مناسب است.",
+      "عدم جلب حمایت تیم در انتخاب رویکرد."
+    ],
+    "interviewQuestions": [
+      "چه زمانی کانبان را به جای اسکرام انتخاب می‌کنید؟",
+      "چگونه با وضعیتی که یک تیم اسکرام و تیم دیگر کانبان می‌خواهد، برخورد می‌کنید؟",
+      "زمانی را توصیف کنید که یک چارچوب چابک را تطبیق دادید. نتیجه چه بود؟",
+      "چگونه یک تیم را از آبشاری به چابک منتقل می‌کنید؟"
     ]
   },
   {
-    "skillName": "Hybrid & Adaptive Approaches",
-    "category": "Agile Frameworks & Methodologies",
-    "marketDemand": "50-60%",
-    "skillType": "Highly Valuable",
-    "requiredForLevel": { "entry": "2/5", "mid": "3/5", "senior": "4/5" },
+    "skillName": "تفکر ناب و جریان ارزش",
+    "category": "چارچوب‌ها و متدولوژی‌های چابک",
+    "marketDemand": "۴۰-۵۰٪",
+    "skillType": "متمایزکننده",
+    "requiredForLevel": { "entry": "۱/۵", "mid": "۳/۵", "senior": "۴/۵" },
     "whatItLooksLike": [
-      "Successfully runs 'Scrumban' approach: Scrum for development, Kanban for operations on same team",
-      "Adapts framework based on context: uses Waterfall for compliance phase, Agile for development",
-      "Designs custom delivery approach for hardware-software integration team",
-      "Explains framework choices to leadership with data-driven rationale",
-      "Helps organization transition from Waterfall to Agile using phased hybrid approach"
+      "ترسیم نقشه جریان ارزش حالت فعلی که ۴۵ مرحله از ایده تا تولید را نشان می‌دهد با ۳۰٪ زمان ارزش‌افزوده.",
+      "شناسایی و حذف ۷ نوع اتلاف، که زمان پیشبرد (lead time) را ۴۰٪ کاهش می‌دهد.",
+      "طراحی نقشه جریان ارزش حالت آینده با ۲۵ مرحله و ۶۰٪ زمان ارزش‌افزوده.",
+      "تسهیلگری کارگاه‌های بهبود جریان ارزش با ذی‌نفعان بین عملکردی.",
+      "استفاده از معیارهای جریان ارزش برای هدایت تصمیمات اجرایی در مورد بهبود فرآیند."
     ],
     "proofPoints": [
-      "Successfully adapted delivery approach for 3+ different team contexts",
-      "Reduced transition friction by 40% using hybrid approach vs. big-bang change",
-      "Can articulate framework trade-offs to stakeholders (e.g., 'Scrum gives predictability, Kanban gives flow')",
-      "Team satisfaction with chosen approach is 8/10 or higher",
-      "Delivery metrics improve by 20%+ after framework adaptation"
+      "کاهش ۳۵٪+ زمان پیشبرد از طریق حذف اتلاف.",
+      "بهبود کارایی جریان ارزش از کمتر از ۲۰٪ به بیش از ۴۰٪.",
+      "مستندسازی نقشه‌های جریان ارزش برای بیش از ۲ فرآیند سرتاسری.",
+      "ارائه به مدیران اجرایی که بیش از ۵۰۰ هزار دلار صرفه‌جویی سالانه از بهینه‌سازی جریان ارزش را نشان می‌دهد.",
+      "تیم‌های بین عملکردی می‌توانند جریان ارزش و نقش خود را در آن توضیح دهند."
     ],
-    "resourcesNeeded": { "time": "100-120 hours over 9 months", "budget": "£1,500-2,200 / $1,800-2,600", "tools": ["Framework comparison matrix templates", "Change management toolkit"], "support": "Agile coach experienced in multiple frameworks" },
-    "realStoryExample": { "persona": "Raj, Mid-Level ADM at Manufacturing Company", "challenge": "Hardware team using Waterfall, software team using Scrum—constant friction at integration points", "action": "Designed hybrid approach: hardware uses stage-gate with Agile checkpoints, software uses Scrum with synchronized demo cadence", "result": "Integration defects decreased 60%, time-to-market improved 25%, cross-functional collaboration improved dramatically", "skillsUsed": ["Hybrid Approaches", "Cross-Functional Collaboration", "Process Design"] },
+    "resourcesNeeded": { "time": "۸۰-۱۲۰ ساعت طی ۶ ماه", "budget": "۸۰۰-۲,۰۰۰ پوند / ۱,۰۰۰-۲,۵۰۰ دلار", "tools": ["نرم‌افزار نقشه‌برداری جریان ارزش یا مواد فیزیکی", "داشبورد معیارهای ناب"], "support": "کوچ ناب یا کمربند مشکی شش سیگما برای مربیگری" },
+    "realStoryExample": { "persona": "لیندا، ADM ارشد در یک شرکت فناوری سلامت", "challenge": "تحویل ویژگی‌ها به طور متوسط ۱۸۰ روز از ایده تا تولید طول می‌کشید و گلوگاه‌ها نامشخص بودند.", "action": "تسهیلگری یک کارگاه ۲ روزه نقشه‌برداری جریان ارزش، شناسایی ۱۲ انتقال و ۶۷٪ زمان انتظار، طراحی مجدد فرآیند.", "result": "زمان پیشبرد به ۷۵ روز کاهش یافت (۵۸٪ بهبود)، دوباره‌کاری ۴۵٪ کاهش یافت و رضایت مشتری ۳۲٪ افزایش یافت.", "skillsUsed": ["نقشه‌برداری جریان ارزش", "تفکر ناب", "بهینه‌سازی فرآیند", "همکاری بین عملکردی"] },
     "commonMistakes": [
-      "Creating 'Wagile' (worst of both Waterfall and Agile)",
-      "Changing approaches too frequently without measuring impact",
-      "Not documenting why specific approach was chosen",
-      "Assuming one framework fits all team types",
-      "Failing to get team buy-in on approach selection"
+      "نقشه‌برداری حالت فعلی بدون تعهد به بهبودهای حالت آینده.",
+      "نقشه‌برداری فقط مسیر خوشحال‌کننده، نادیده گرفتن استثناها و دوباره‌کاری.",
+      "عدم مشارکت همه ذی‌نفعان در کارگاه‌های جریان ارزش.",
+      "تمرکز فقط بر بهینه‌سازی سطح تیمی بدون دیدن جریان سرتاسری.",
+      "ایجاد نقشه‌های زیبا که بدون اقدام، کنار گذاشته می‌شوند."
     ],
     "interviewQuestions": [
-      "When would you choose Kanban over Scrum?",
-      "How do you handle a situation where one team wants Scrum and another wants Kanban?",
-      "Describe a time you adapted an Agile framework. What was the outcome?",
-      "How would you transition a team from Waterfall to Agile?"
+      "۷ اتلاف ناب چیست؟ مثال‌هایی از تحویل نرم‌افزار بزنید.",
+      "چگونه گلوگاه‌ها را در یک فرآیند تحویل شناسایی می‌کنید؟",
+      "مراحل برگزاری یک کارگاه نقشه‌برداری جریان ارزش را برای من شرح دهید.",
+      "تفاوت بین زمان چرخه و زمان پیشبرد چیست؟"
     ]
   },
   {
-    "skillName": "Lean & Value Stream Thinking",
-    "category": "Agile Frameworks & Methodologies",
-    "marketDemand": "40-50%",
-    "skillType": "Differentiator",
-    "requiredForLevel": { "entry": "1/5", "mid": "3/5", "senior": "4/5" },
+    "skillName": "برنامه‌ریزی OKR و همسویی",
+    "category": "چارچوب‌ها و متدولوژی‌های چابک",
+    "marketDemand": "۵۵-۶۵٪",
+    "skillType": "بسیار ارزشمند",
+    "requiredForLevel": { "entry": "۱/۵", "mid": "۳/۵", "senior": "۴/۵" },
     "whatItLooksLike": [
-      "Maps current-state value stream showing 45 steps from idea to production, 30% value-added time",
-      "Identifies and eliminates 7 types of waste, reducing lead time by 40%",
-      "Designs future-state value stream with 25 steps and 60% value-added time",
-      "Facilitates value stream improvement workshops with cross-functional stakeholders",
-      "Uses value stream metrics to drive executive decisions on process improvements"
+      "تسهیلگری جلسات تعیین OKR (اهداف و نتایج کلیدی) برای تیم که با اهداف استراتژیک شرکت همسو است.",
+      "اطمینان از اینکه هر نتیجه کلیدی (Key Result) قابل اندازه‌گیری است و یک مالک مشخص دارد.",
+      "ایجاد داشبوردهای قابل مشاهده برای پیگیری پیشرفت OKRها به صورت هفتگی.",
+      "کمک به تیم برای تجزیه بک‌لاگ به ابتکاراتی که مستقیماً به نتایج کلیدی کمک می‌کنند.",
+      "مربیگری مالک محصول در مورد اینکه چگونه OKRها به اولویت‌بندی کمک می‌کنند."
     ],
     "proofPoints": [
-      "Lead time reduced by 35%+ through waste elimination",
-      "Value stream efficiency improved from <20% to >40%",
-      "Documented value stream maps for 2+ end-to-end processes",
-      "Executive presentation showing $500K+ annual savings from value stream optimization",
-      "Cross-functional teams can articulate value stream and their role in it"
+      "بیش از ۹۰٪ از کارهای تیم به طور واضح به یک نتیجه کلیدی مرتبط است.",
+      "تیم می‌تواند توضیح دهد که چگونه کار روزانه‌شان به اهداف بزرگتر شرکت کمک می‌کند.",
+      "پیشرفت OKRها به طور مداوم پیگیری و گزارش می‌شود.",
+      "موفقیت‌آمیز بودن حداقل ۲ چرخه OKR با درس‌های آموخته شده مستند.",
+      "تغییر تمرکز تیم از «خروجی» (ویژگی‌های تحویل داده شده) به «نتایج» (تأثیر بر نتایج کلیدی)."
     ],
-    "resourcesNeeded": { "time": "80-120 hours over 6 months", "budget": "£800-2,000 / $1,000-2,500", "tools": ["Value stream mapping software or physical materials", "Lean metrics dashboard"], "support": "Lean coach or Six Sigma Black Belt for mentorship" },
-    "realStoryExample": { "persona": "Linda, Senior ADM at Healthcare Technology Company", "challenge": "Feature delivery taking 180 days on average from idea to production, unclear bottlenecks", "action": "Facilitated 2-day value stream mapping workshop, identified 12 handoffs and 67% wait time, redesigned process", "result": "Lead time reduced to 75 days (58% improvement), rework reduced 45%, customer satisfaction increased 32%", "skillsUsed": ["Value Stream Mapping", "Lean Thinking", "Process Optimization", "Cross-Functional Collaboration"] },
+    "resourcesNeeded": { "time": "۴۰-۶۰ ساعت در هر فصل", "budget": "۰-۵۰۰ پوند / ۰-۶۰۰ دلار", "tools": ["نرم‌افزار OKR (مانند Ally.io)", "Confluence", "Miro"], "support": "حمایت اجرایی برای پذیرش OKR" },
+    "realStoryExample": { "persona": "عمر، ADM سطح میانی در یک استارتاپ", "challenge": "تیم‌ها «مشغول» بودند اما تأثیر تجاری مشخصی نداشتند. هر تیم در جهت متفاوتی حرکت می‌کرد.", "action": "فرایند OKR را معرفی کرد، به هر تیم کمک کرد تا اهداف همسو با اهداف شرکت را تعیین کند و بررسی‌های هفتگی OKR را تسهیل کرد.", "result": "همسویی در سراسر تیم‌ها به شدت بهبود یافت، گفتگوها بر نتایج متمرکز شد و تیم‌ها شروع به اتخاذ تصمیمات داده‌محور کردند.", "skillsUsed": ["چارچوب OKR", "همسویی استراتژیک", "تسهیلگری", "اندازه‌گیری عملکرد"] },
     "commonMistakes": [
-      "Mapping current state without committing to future state improvements",
-      "Only mapping the happy path, ignoring exceptions and rework",
-      "Not involving all stakeholders in value stream workshops",
-      "Focusing only on team-level optimization without seeing end-to-end flow",
-      "Creating beautiful maps that sit on shelf without driving action"
+      "نوشتن نتایج کلیدی که در واقع لیستی از وظایف هستند، نه نتایج قابل اندازه‌گیری.",
+      "داشتن تعداد زیادی OKR (۳-۵ هدف بهینه است).",
+      "تعیین OKRها و سپس نادیده گرفتن آن‌ها تا پایان فصل.",
+      "استفاده از OKRها برای ارزیابی عملکرد فردی (باعث کاهش ریسک‌پذیری می‌شود).",
+      "عدم همسویی OKRهای تیمی با اهداف سطح بالاتر."
     ],
     "interviewQuestions": [
-      "What are the 7 wastes of Lean? Give examples from software delivery.",
-      "How do you identify bottlenecks in a delivery process?",
-      "Walk me through how you'd conduct a value stream mapping workshop.",
-      "What's the difference between cycle time and lead time?"
+      "تفاوت بین هدف و نتیجه کلیدی چیست؟",
+      "چگونه یک تیم را در فرآیند تعیین OKRهای مؤثر راهنمایی می‌کنید؟",
+      "چگونه با نتیجه کلیدی که دیگر منطقی نیست، برخورد می‌کنید؟",
+      "OKRها چگونه به اولویت‌بندی در سطح تیم کمک می‌کنند؟"
+    ]
+  },
+  // --- مهارت فنی و ابزارها ---
+  {
+    "skillName": "ابزارهای مدیریت پروژه چابک (جیرا/Azure DevOps)",
+    "category": "مهارت فنی و ابزارها",
+    "marketDemand": "۷۵-۸۵٪",
+    "skillType": "مهارت ضروری",
+    "requiredForLevel": { "entry": "۴/۵", "mid": "۴/۵", "senior": "۴/۵" },
+    "whatItLooksLike": [
+      "پیکربندی برد جیرا با گردش کار، فیلدها و قوانین اتوماسیون سفارشی که بیش از ۱۰ ساعت در هفته صرفه‌جویی می‌کند.",
+      "ایجاد داشبورد اجرایی که داده‌های آنی را از جیرا می‌خواند و سلامت تحویل را در یک نگاه نشان می‌دهد.",
+      "طراحی اعلان‌های خودکار که تیم را طی ۱ ساعت از تغییر وضعیت موانع مطلع می‌کند.",
+      "یکپارچه‌سازی جیرا با Confluence، Slack و GitHub برای گردش کار یکپارچه.",
+      "آموزش بیش از ۲۰ عضو تیم در مورد استفاده مؤثر از ابزار که تیکت‌های پشتیبانی را ۶۰٪ کاهش می‌دهد."
+    ],
+    "proofPoints": [
+      "تیم کمتر از ۵٪ از زمان خود را صرف مدیریت ابزار می‌کند (در مقابل ۱۵-۲۰٪ معمول).",
+      "داشبوردهای آنی روزانه توسط رهبری برای تصمیم‌گیری استفاده می‌شود.",
+      "پذیرش ۱۰۰٪ تیم با کمتر از ۱۰٪ راه‌حل‌های دستی.",
+      "خودکارسازی بیش از ۱۵ کار تکراری که بیش از ۴۰ ساعت در ماه صرفه‌جویی می‌کند.",
+      "توانایی راه‌اندازی برد تیم جدید با پیکربندی کامل در کمتر از ۲ ساعت."
+    ],
+    "resourcesNeeded": { "time": "۶۰-۸۰ ساعت طی ۳ ماه", "budget": "۲۰۰-۵۰۰ پوند / ۲۵۰-۶۰۰ دلار", "tools": ["Jira Premium یا Azure DevOps", "Confluence", "ابزارهای یکپارچه‌سازی"], "support": "ادمین جیرا یا مهندس DevOps برای موضوعات پیشرفته" },
+    "realStoryExample": { "persona": "تام، ADM تازه‌کار در یک شرکت تجارت الکترونیک", "challenge": "تیم هفته‌ای ۲ ساعت صرف به‌روزرسانی دستی وضعیت‌ها می‌کرد، داده‌ها ناهماهنگ بودند و گزارش‌گیری دشوار بود.", "action": "ایجاد قوانین اتوماسیون برای تغییر وضعیت‌ها، ایجاد گردش کارهای استاندارد، توسعه داشبوردهای آنی.", "result": "کار دستی به ۱۵ دقیقه در هفته کاهش یافت، دقت گزارش‌گیری ۹۸٪ شد، اعتماد رهبری به داده‌ها افزایش یافت و به سطح میانی ارتقا یافت.", "skillsUsed": ["مدیریت جیرا", "اتوماسیون فرآیند", "تجسم داده"] },
+    "commonMistakes": [
+      "پیچیده کردن بیش از حد گردش کارها با وضعیت‌های زیاد.",
+      "عدم آموزش تیم در مورد قابلیت‌های ابزار.",
+      "استفاده از فیلدهای سفارشی برای همه چیز به جای فیلدهای استاندارد.",
+      "عدم یکپارچه‌سازی با ابزارهای دیگر (Confluence، Slack).",
+      "عدم استفاده از اتوماسیون برای کارهای تکراری."
+    ],
+    "interviewQuestions": [
+      "چگونه یک برد جیرا برای تیمی که هم توسعه و هم پشتیبانی انجام می‌دهد، طراحی می‌کنید؟",
+      "زمانی را توضیح دهید که از اتوماسیون برای بهبود کارایی تیم استفاده کردید.",
+      "تفاوت بین برد اسکرام و برد کانبان در جیرا چیست؟",
+      "چگونه از کیفیت داده‌ها در ابزار مدیریت پروژه خود اطمینان حاصل می‌کنید؟"
     ]
   },
   {
-    "skillName": "Agile Project Management Tools (Jira/Azure DevOps)",
-    "category": "Technical & Tools Proficiency",
-    "marketDemand": "75-85%",
-    "skillType": "Must-Have",
-    "requiredForLevel": { "entry": "4/5", "mid": "4/5", "senior": "4/5" },
+    "skillName": "دانش چرخه عمر توسعه نرم‌افزار (SDLC)",
+    "category": "مهارت فنی و ابزارها",
+    "marketDemand": "۷۰٪",
+    "skillType": "مهارت ضروری",
+    "requiredForLevel": { "entry": "۳/۵", "mid": "۴/۵", "senior": "۴/۵" },
     "whatItLooksLike": [
-      "Configures Jira board with custom workflows, fields, and automation rules saving 10+ hours/week",
-      "Creates executive dashboard pulling real-time data from Jira showing delivery health at-a-glance",
-      "Designs automated notifications that alert team to blockers within 1 hour of status change",
-      "Integrates Jira with Confluence, Slack, and GitHub for seamless workflow",
-      "Trains 20+ team members on effective tool usage reducing support tickets by 60%"
+      "قادر به بحث در مورد تصمیمات معماری فنی با توسعه‌دهندگان و پرسیدن سؤالات شفاف‌کننده است.",
+      "درک می‌کند که چرا کار فرانت‌اند به تکمیل API بک‌اند بستگی دارد و بر اساس آن برنامه‌ریزی می‌کند.",
+      "تشخیص می‌دهد که چه زمانی بدهی فنی باعث کاهش شتاب می‌شود و گفتگو با محصول را تسهیل می‌کند.",
+      "تشخیص می‌دهد که چه زمانی «تعریف انجام‌شده» فاقد مراحل حیاتی است (مثلاً، بازبینی امنیتی، تست عملکرد).",
+      "انتشارها را در چندین محیط (توسعه، آزمایشی، تولید) با وابستگی‌های استقرار هماهنگ می‌کند."
     ],
     "proofPoints": [
-      "Team spends <5% of time on tool administration (vs. 15-20% typical)",
-      "Real-time dashboards used daily by leadership for decision-making",
-      "100% team adoption with <10% manual workarounds",
-      "Automated 15+ repetitive tasks saving 40+ hours per month",
-      "Can set up new team board fully configured in under 2 hours"
+      "قادر به توضیح پشته فناوری تیم به ذی‌نفعان غیرفنی است.",
+      "تأثیر کار فنی بر زمان‌بندی تحویل را به درستی تخمین می‌زند.",
+      "توسعه‌دهندگان اعتبار فنی شما را ۸ از ۱۰ یا بالاتر ارزیابی می‌کنند.",
+      "کاهش ۴۰٪ شکست‌های استقرار از طریق بهبود دروازه‌های کیفیت.",
+      "تسهیلگری موفقیت‌آمیز جلسات سه تفنگدار (3-amigos) با ورودی فنی معنادار."
     ],
-    "resourcesNeeded": { "time": "60-80 hours over 3 months", "budget": "£200-500 / $250-600", "tools": ["Jira Premium or Azure DevOps", "Confluence", "Integration tools"], "support": "Jira admin or DevOps engineer for advanced topics" },
-    "realStoryExample": { "persona": "Tom, Entry-Level ADM at E-commerce Company", "challenge": "Team spending 2 hours per week manually updating statuses, inconsistent data, difficult reporting", "action": "Built automation rules for status transitions, created standardized workflows, developed real-time dashboards", "result": "Manual work reduced to 15 min/week, reporting accuracy 98%, leadership confidence in data increased, promoted to mid-level", "skillsUsed": ["Jira Administration", "Process Automation", "Data Visualization"] },
+    "resourcesNeeded": { "time": "۸۰-۱۰۰ ساعت طی ۴ ماه", "budget": "۵۰-۲۰۰ پوند / ۶۰-۲۵۰ دلار", "tools": ["دسترسی به مستندات فنی تیم", "محیط سندباکس برای کاوش"], "support": "راهبر فنی یا توسعه‌دهنده ارشد به عنوان مربی" },
+    "realStoryExample": { "persona": "پریا، ADM سطح میانی در یک استارتاپ SaaS", "challenge": "نمی‌توانست درک کند چرا ویژگی‌های «ساده» ۲ هفته طول می‌کشد—در حال از دست دادن اعتبار نزد محصول و رهبری بود.", "action": "۲ هفته با توسعه‌دهندگان کار کرد، اصول پشته فناوری تیم را یاد گرفت و مستندات SDLC را ایجاد کرد.", "result": "اکنون می‌تواند پیچیدگی فنی را به درستی تخمین بزند، گفتگوهای برنامه‌ریزی بهتری را تسهیل می‌کند و اعتماد تیم را بازیافت.", "skillsUsed": ["دانش SDLC", "کنجکاوی فنی", "ایجاد رابطه"] },
     "commonMistakes": [
-      "Over-complicating workflows with too many statuses",
-      "Not training team on tool capabilities",
-      "Using custom fields for everything instead of standard fields",
-      "Failing to integrate with other tools (Confluence, Slack)",
-      "Not leveraging automation for repetitive tasks"
+      "وانمود کردن به درک مفاهیم فنی در حالی که نمی‌دانید.",
+      "وقت نگذاشتن برای یادگیری اصول فناوری تیم.",
+      "نادیده گرفتن نگرانی‌های فنی به عنوان «فقط مشکلات توسعه».",
+      "نادیده گرفتن نیازمندی‌های غیرعملکردی (عملکرد، امنیت، مقیاس‌پذیری).",
+      "عدم درک تأثیر بدهی فنی بر شتاب."
     ],
     "interviewQuestions": [
-      "How would you design a Jira board for a team doing both development and support?",
-      "Explain a time you used automation to improve team efficiency.",
-      "What's the difference between a Scrum board and a Kanban board in Jira?",
-      "How do you ensure data quality in your project management tool?"
+      "چرخه عمر توسعه نرم‌افزار را از دیدگاه خود به عنوان یک ADM توضیح دهید.",
+      "چگونه با موقعیت‌هایی که جزئیات فنی را نمی‌فهمید، برخورد می‌کنید؟",
+      "چه دروازه‌های کیفیتی را در SDLC تیم خود پیاده‌سازی می‌کنید؟",
+      "چگونه بین توسعه ویژگی و بدهی فنی تعادل برقرار می‌کنید؟"
     ]
   },
   {
-    "skillName": "Software Development Lifecycle (SDLC) Knowledge",
-    "category": "Technical & Tools Proficiency",
-    "marketDemand": "70%",
-    "skillType": "Must-Have",
-    "requiredForLevel": { "entry": "3/5", "mid": "4/5", "senior": "4/5" },
+    "skillName": "دانش DevOps و CI/CD",
+    "category": "مهارت فنی و ابزارها",
+    "marketDemand": "۶۵-۷۵٪",
+    "skillType": "بسیار ارزشمند",
+    "requiredForLevel": { "entry": "۱/۵", "mid": "۳/۵", "senior": "۴/۵" },
     "whatItLooksLike": [
-      "Can discuss technical architecture decisions with developers and ask clarifying questions",
-      "Understands why frontend work depends on backend API completion and plans accordingly",
-      "Identifies when technical debt is slowing velocity and facilitates conversation with product",
-      "Recognizes when Definition of Done lacks critical steps (e.g., security review, performance testing)",
-      "Coordinates releases across multiple environments (dev, staging, production) with deployment dependencies"
+      "می‌تواند یک پایپ‌لاین CI/CD را در سطح بالا توضیح دهد (ساخت، تست، استقرار).",
+      "گفتگوها را در مورد بهبود زمان چرخه استقرار (deployment cycle time) تسهیل می‌کند.",
+      "تأثیر تصمیمات تحویل را بر پایداری تولید درک می‌کند (مثلاً، انتشار تدریجی در مقابل انتشار بزرگ).",
+      "به تیم در شناسایی گلوگاه‌ها در فرآیند انتشار کمک می‌کند.",
+      "از معیارهای DORA (زمان پیشبرد برای تغییرات، فرکانس استقرار) برای اطلاع‌رسانی به بهبودها حمایت می‌کند."
     ],
     "proofPoints": [
-      "Can explain team's tech stack to non-technical stakeholders",
-      "Accurately estimates impact of technical work on delivery timelines",
-      "Developers rate your technical credibility as 8/10 or higher",
-      "Reduced deployment failures by 40% through improved quality gates",
-      "Successfully facilitated 3-amigos sessions with meaningful technical input"
+      "کاهش زمان از commit تا استقرار به کمتر از ۲۴ ساعت.",
+      "افزایش فرکانس استقرار از ماهانه به هفتگی یا روزانه.",
+      "نرخ شکست تغییرات به کمتر از ۱۵٪ کاهش یافته است.",
+      "تیم می‌تواند به وضوح فرآیند انتشار خود و دروازه‌های کیفیت آن را بیان کند.",
+      "تسهیلگری موفقیت‌آمیز یک کارگاه بهبود پایپ‌لاین CI/CD."
     ],
-    "resourcesNeeded": { "time": "80-100 hours over 4 months", "budget": "£50-200 / $60-250", "tools": ["Access to team's technical documentation", "Sandbox environment for exploration"], "support": "Technical lead or senior developer as mentor" },
-    "realStoryExample": { "persona": "Priya, Mid-Level ADM at SaaS Startup", "challenge": "Couldn't understand why 'simple' features took 2 weeks—losing credibility with product and leadership", "action": "Spent 2 weeks pairing with developers, learned basics of team's tech stack, created SDLC documentation", "result": "Can now accurately estimate technical complexity, facilitates better planning conversations, regained team trust", "skillsUsed": ["SDLC Knowledge", "Technical Curiosity", "Relationship Building"] },
+    "resourcesNeeded": { "time": "۵۰-۷۰ ساعت طی ۶ ماه", "budget": "۳۰۰-۸۰۰ پوند / ۳۵۰-۹۵۰ دلار", "tools": ["GitHub Actions/GitLab CI/Jenkins", "داشبورد نظارت"], "support": "همکاری با مهندسان DevOps یا پلتفرم" },
+    "realStoryExample": { "persona": "کارلوس، ADM سطح میانی در یک شرکت فین‌تک", "challenge": "انتشارها دستی، مستعد خطا و نیازمند یک روز کامل توقف بودند. تیم از استقرار می‌ترسید.", "action": "با تیم DevOps برای معرفی یک پایپ‌لاین CI/CD اولیه همکاری کرد، تست‌های خودکار را ترویج داد و یک فرآیند انتشار تدریجی را پیاده‌سازی کرد.", "result": "زمان استقرار از ۸ ساعت به ۱۵ دقیقه کاهش یافت، فرکانس انتشار از ماهانه به روزانه افزایش یافت و استرس تیم به شدت کاهش یافت.", "skillsUsed": ["دانش DevOps", "بهینه‌سازی فرآیند", "مدیریت ریسک", "همکاری بین عملکردی"] },
     "commonMistakes": [
-      "Pretending to understand technical concepts when you don't",
-      "Not investing time to learn basics of team's technology",
-      "Dismissing technical concerns as 'just development problems'",
-      "Ignoring non-functional requirements (performance, security, scalability)",
-      "Not understanding impact of technical debt on velocity"
+      "تمرکز تنها بر سرعت بدون در نظر گرفتن پایداری.",
+      "نادیده گرفتن اهمیت تست خودکار در پایپ‌لاین.",
+      "عدم مشارکت امنیت در فرآیند DevOps (DevSecOps).",
+      "نگاه کردن به DevOps به عنوان مسئولیت یک تیم دیگر، نه یک ذهنیت تیمی.",
+      "خودکارسازی یک فرآیند ناکارآمد به جای بهبود آن."
     ],
     "interviewQuestions": [
-      "Explain the software development lifecycle from your perspective as an ADM.",
-      "How do you handle situations where you don't understand the technical details?",
-      "What quality gates do you implement in your team's SDLC?",
-      "How do you balance feature development with technical debt?"
+      "CI/CD چیست و چرا برای تیم‌های چابک مهم است؟",
+      "چهار معیار کلیدی DORA چیست؟",
+      "چگونه با تیمی که در برابر پذیرش شیوه‌های DevOps مقاومت می‌کند، کار می‌کنید؟",
+      "تفاوت بین استقرار آبی/سبز و انتشار قناری را توضیح دهید."
+    ]
+  },
+  // --- مدیریت و اجرای تحویل ---
+  {
+    "skillName": "مدیریت و اولویت‌بندی بک‌لاگ",
+    "category": "مدیریت و اجرای تحویل",
+    "marketDemand": "۸۵-۹۰٪",
+    "skillType": "شایستگی اصلی",
+    "requiredForLevel": { "entry": "۴/۵", "mid": "۴/۵", "senior": "۵/۵" },
+    "whatItLooksLike": [
+      "نگهداری بک‌لاگ با استوری‌های «آماده» برای ۲ اسپرینت که «تعریف آمادگی» را برآورده می‌کنند.",
+      "تسهیلگری جلسات پالایش که در آن ۹۰٪ سؤالات را تیم می‌پرسد (نه توسط ADM).",
+      "استفاده از WSJF (کوتاه‌ترین کار وزن‌دار اول) برای اولویت‌بندی ویژگی‌ها بر اساس ارزش تجاری و فوریت.",
+      "کاهش کارهای برنامه‌ریزی نشده از ۴۰٪ به ۱۰٪ از طریق بهداشت بهتر بک‌لاگ.",
+      "ایجاد نقشه‌های داستان کاربر که به مالک محصول در تجسم دامنه انتشار کمک می‌کند."
+    ],
+    "proofPoints": [
+      "بیش از ۹۰٪ استوری‌ها قبل از برنامه‌ریزی اسپرینت «تعریف آمادگی» را برآورده می‌کنند.",
+      "کارهای برنامه‌ریزی نشده به کمتر از ۱۵٪ ظرفیت اسپرینت کاهش یافته است.",
+      "دقت تخمین تیم در طی ۵ اسپرینت در محدوده ۲۰٪± است.",
+      "امتیاز رضایت مالک محصول از اثربخشی پالایش ۹ از ۱۰ است.",
+      "هیچ استوری به دلیل نیازمندی‌های نامشخص برای بیش از ۳ اسپرینت ناتمام باقی نمانده است."
+    ],
+    "resourcesNeeded": { "time": "۶۰-۸۰ ساعت طی ۴ ماه", "budget": "۱,۲۰۰-۱,۸۰۰ پوند / ۱,۴۰۰-۲,۱۰۰ دلار", "tools": ["جیرا یا ابزار مشابه برای مدیریت بک‌لاگ", "Miro برای نقشه‌برداری داستان کاربر"], "support": "همکاری با مالک محصول و تیم" },
+    "realStoryExample": { "persona": "الکس، ADM تازه‌کار در یک شرکت بازی موبایل", "challenge": "بک‌لاگ با بیش از ۳۰۰ استوری پالایش نشده، تیم کارها را به صورت تصادفی انتخاب می‌کرد، شفاف‌سازی مداوم دامنه در اواسط اسپرینت.", "action": "ایجاد یک چرخه پالایش، ایجاد «تعریف آمادگی»، پیاده‌سازی خطوط «آماده» در مقابل «بک‌لاگ»، پالایش ۴۰ استوری برتر.", "result": "قابلیت پیش‌بینی اسپرینت از ۵۵٪ به ۸۸٪ افزایش یافت، استرس تیم کاهش یافت و اعتماد مالک محصول بهبود یافت.", "skillsUsed": ["مدیریت بک‌لاگ", "تسهیلگری", "تعریف فرآیند"] },
+    "commonMistakes": [
+      "اجازه دادن به رشد بک‌لاگ به بیش از ۵۰۰ مورد بدون پالایش.",
+      "پالایش استوری‌ها توسط ADM به تنهایی به جای تسهیلگری پالایش تیمی.",
+      "عدم اجرای «تعریف آمادگی».",
+      "اجازه ورود استوری‌های مبهم به اسپرینت.",
+      "عدم شکستن استوری‌های بزرگ به تکه‌های کوچک و با ارزش."
+    ],
+    "interviewQuestions": [
+      "چگونه از سلامت و آمادگی یک بک‌لاگ برای برنامه‌ریزی اطمینان حاصل می‌کنید؟",
+      "تکنیک‌های مختلف اولویت‌بندی را توضیح دهید و بگویید چه زمانی از هر کدام استفاده می‌کنید.",
+      "چگونه با مالک محصولی که می‌خواهد پالایش را نادیده بگیرد، برخورد می‌کنید؟",
+      "«تعریف آمادگی» شما چیست و چگونه آن را اجرا می‌کنید؟"
     ]
   },
   {
-    "skillName": "Backlog Management & Prioritization",
-    "category": "Delivery Management & Execution",
-    "marketDemand": "85-90%",
-    "skillType": "Core Competency",
-    "requiredForLevel": { "entry": "4/5", "mid": "4/5", "senior": "5/5" },
+    "skillName": "برنامه‌ریزی انتشار و پیش‌بینی",
+    "category": "مدیریت و اجرای تحویل",
+    "marketDemand": "۷۰-۸۰٪",
+    "skillType": "شایستگی اصلی",
+    "requiredForLevel": { "entry": "۲/۵", "mid": "۴/۵", "senior": "۵/۵" },
     "whatItLooksLike": [
-      "Maintains backlog with 2 sprints of 'ready' stories meeting Definition of Ready",
-      "Facilitates refinement sessions where team asks 90% of questions (not ADM-driven)",
-      "Uses WSJF (Weighted Shortest Job First) to prioritize features by business value and urgency",
-      "Reduces unplanned work from 40% to 10% through better backlog hygiene",
-      "Creates user story maps that help Product Owner visualize release scope"
+      "تسهیلگری جلسات برنامه‌ریزی انتشار که نقشه راه محصول را به یک برنامه تحویل ملموس ترجمه می‌کند.",
+      "ایجاد پیش‌بینی‌های مبتنی بر داده (مثلاً، با استفاده از شبیه‌سازی مونت کارلو) که احتمال ۸۵٪ را نشان می‌دهد.",
+      "ارتباط شفاف پیش‌بینی‌ها به عنوان یک محدوده، نه یک تاریخ قطعی، به ذی‌نفعان.",
+      "مدیریت وابستگی‌های بین تیمی در طول برنامه‌ریزی انتشار.",
+      "تطبیق برنامه انتشار بر اساس بازخورد و داده‌های جدید."
     ],
     "proofPoints": [
-      "90%+ of stories meet Definition of Ready before sprint planning",
-      "Unplanned work reduced to <15% of sprint capacity",
-      "Team estimation accuracy within ±20% over 5 sprints",
-      "Product Owner satisfaction score 9/10 for refinement effectiveness",
-      "Zero stories carried incomplete due to unclear requirements for 3+ sprints"
+      "بیش از ۸۰٪ از انتشارهای برنامه‌ریزی شده در بازه زمانی پیش‌بینی شده تحویل داده می‌شوند.",
+      "ذی‌نفعان می‌توانند تفاوت بین یک تعهد و یک پیش‌بینی را توضیح دهند.",
+      "برنامه‌های انتشار به طور واضح وابستگی‌ها، ریسک‌ها و فرضیات را مشخص می‌کنند.",
+      "با موفقیت بیش از ۳ برنامه انتشار پیچیده با چندین تیم را مدیریت کرده است.",
+      "قادر به ایجاد یک نقشه راه اولیه با دقت ۸۰٪ با استفاده از داده‌های تاریخی است."
     ],
-    "resourcesNeeded": { "time": "60-80 hours over 4 months", "budget": "£1,200-1,800 / $1,400-2,100", "tools": ["Jira or similar for backlog management", "Miro for user story mapping"], "support": "Product Owner partnership and team collaboration" },
-    "realStoryExample": { "persona": "Alex, Entry-Level ADM at Mobile Gaming Company", "challenge": "Backlog of 300+ unrefined stories, team pulling work randomly, constant scope clarification mid-sprint", "action": "Established refinement cadence, created Definition of Ready, implemented 'ready' vs. 'backlog' swim lanes, groomed top 40 stories", "result": "Sprint predictability increased from 55% to 88%, team stress decreased, Product Owner confidence improved", "skillsUsed": ["Backlog Management", "Facilitation", "Process Definition"] },
+    "resourcesNeeded": { "time": "۲۰-۳۰ ساعت در هر فصل برای برنامه‌ریزی", "budget": "۰-۳۰۰ پوند / ۰-۳۵۰ دلار", "tools": ["جیرا با Advanced Roadmaps", "ابزارهای شبیه‌سازی مونت کارلو", "Miro"], "support": "همکاری با مدیران محصول و راهبران فنی" },
+    "realStoryExample": { "persona": "ماریا، ADM سطح میانی در یک پلتفرم تجارت الکترونیک", "challenge": "رهبری خواستار تاریخ‌های انتشار دقیق بود، اما تیم در یک محیط نامشخص کار می‌کرد که منجر به از دست رفتن ضرب‌الاجل‌ها و ناامیدی می‌شد.", "action": "پیش‌بینی مبتنی بر محدوده را با استفاده از شبیه‌سازی مونت کارلو معرفی کرد. به جای یک تاریخ، یک «محدوده فرود ۸۵٪ محتمل» ارائه داد.", "result": "اعتماد رهبری بازسازی شد، گفتگوها از سرزنش به مدیریت ریسک تغییر کرد و تیم توانست با انتظارات واقع‌بینانه کار کند.", "skillsUsed": ["پیش‌بینی", "مدیریت انتظارات", "ارتباطات", "تحلیل داده"] },
     "commonMistakes": [
-      "Letting backlog grow to 500+ items with no grooming",
-      "ADM refining stories alone instead of facilitating team refinement",
-      "Not enforcing Definition of Ready",
-      "Allowing vague stories into sprint",
-      "Not breaking down large stories into smaller, valuable increments"
+      "ارائه یک پیش‌بینی به عنوان یک تعهد قطعی.",
+      "ایجاد برنامه‌های دقیق برای بیش از ۳ ماه آینده.",
+      "نادیده گرفتن وابستگی‌های خارجی در طول برنامه‌ریزی.",
+      "عدم بازبینی و تطبیق برنامه انتشار به طور منظم.",
+      "استفاده از «میانگین» شتاب برای پیش‌بینی بدون در نظر گرفتن تغییرپذیری."
     ],
     "interviewQuestions": [
-      "How do you ensure a backlog is healthy and ready for planning?",
-      "Explain different prioritization techniques and when to use each.",
-      "How do you handle a Product Owner who wants to skip refinement?",
-      "What's your Definition of Ready and how do you enforce it?"
+      "چگونه یک پیش‌بینی چابک ایجاد می‌کنید؟ از چه ابزارها و داده‌هایی استفاده می‌کنید؟",
+      "تفاوت بین برنامه‌ریزی انتشار و برنامه‌ریزی اسپرینت چیست؟",
+      "چگونه دامنه، تاریخ و بودجه را در طول برنامه‌ریزی متعادل می‌کنید؟",
+      "چگونه با ذی‌نفعی که خواستار یک تاریخ انتشار قطعی است، برخورد می‌کنید؟"
     ]
   },
   {
-    "skillName": "Impediment & Blocker Removal",
-    "category": "Delivery Management & Execution",
-    "marketDemand": "100%",
-    "skillType": "Core Competency",
-    "requiredForLevel": { "entry": "4/5", "mid": "5/5", "senior": "5/5" },
+    "skillName": "مدیریت ریسک و موانع",
+    "category": "مدیریت و اجرای تحویل",
+    "marketDemand": "۹۰-۹۵٪",
+    "skillType": "مهارت ضروری",
+    "requiredForLevel": { "entry": "۴/۵", "mid": "۵/۵", "senior": "۵/۵" },
     "whatItLooksLike": [
-      "Maintains impediment log with owner, impact, action, and resolution target for each blocker",
-      "Resolves 80%+ of team-level impediments within 48 hours",
-      "Escalates organizational blockers to appropriate level with clear business impact statement",
-      "Proactively identifies potential blockers in sprint planning and mitigates before they materialize",
-      "Creates metrics showing average blocker resolution time trending downward over 6 months"
+      "جلسات شناسایی ریسک در سطح تیم (مانند پیش‌مرگ‌نگری) را تسهیلگری می‌کند که منجر به یک لاگ RAID اولویت‌بندی شده می‌شود.",
+      "بیش از ۹۰٪ موانع گزارش‌شده توسط تیم را طی ۲۴-۴۸ ساعت برطرف می‌کند.",
+      "موانع سازمانی را با بیانیه‌های تأثیر واضح و راه‌حل‌های پیشنهادی به رهبری ارجاع می‌دهد.",
+      "یک برد موانع قابل مشاهده را نگهداری می‌کند که وضعیت و مالکیت را نشان می‌دهد.",
+      "تیم را برای حل موانع خود قبل از ارجاع، کوچ می‌کند."
     ],
     "proofPoints": [
-      "Average blocker resolution time <3 days for 80% of impediments",
-      "Team reports <10% of time blocked (down from 30%+)",
-      "Zero critical blockers unresolved for more than 1 week",
-      "Documented resolution of 50+ impediments over 6 months",
-      "Reduced recurring blockers by 60% through systemic fixes"
+      "کمتر از ۱۰٪ اهداف اسپرینت به دلیل ریسک‌های پیش‌بینی‌نشده از دست می‌روند.",
+      "تیم «زمان حل مانع» را به طور متوسط زیر ۲۴ ساعت گزارش می‌دهد.",
+      "شواهد ارجاع و حل موفقیت‌آمیز بیش از ۳ مانع سازمانی مهم.",
+      "لاگ RAID به طور فعال نگهداری و هفتگی بازبینی می‌شود.",
+      "تیم می‌تواند در هر زمان ۳ ریسک اصلی خود را بیان کند."
     ],
-    "resourcesNeeded": { "time": "5-10 hours per week ongoing", "budget": "Minimal ($0-500 / £0-400 for tools)", "tools": ["Impediment tracking system", "Communication tools (Slack, email)"], "support": "Management support for escalations and organizational blockers" },
-    "realStoryExample": { "persona": "David, Mid-Level ADM at Insurance Company", "challenge": "Team blocked 40% of time waiting for InfoSec approvals, taking 2-3 weeks per review", "action": "Built relationship with InfoSec lead, created pre-review checklist, established weekly triage meeting", "result": "Approval time reduced to 3-5 days, team blocked time dropped to 8%, delivery velocity increased 35%", "skillsUsed": ["Impediment Removal", "Stakeholder Management", "Process Optimization"] },
+    "resourcesNeeded": { "time": "مستمر، ۲-۴ ساعت در هفته", "budget": "حداقل", "tools": ["جیرا/ADO برای پیگیری", "Confluence برای لاگ RAID"], "support": "دسترسی به رهبری برای ارجاع‌ها" },
+    "realStoryExample": { "persona": "دیوید، ADM سطح میانی", "challenge": "یک وابستگی حیاتی به تیم دیگر به طور مداوم به تأخیر می‌افتاد و اسپرینت‌ها را مختل می‌کرد.", "action": "یک جلسه هماهنگی رسمی بین تیمی ایجاد کرد، یک برد وابستگی مشترک ساخت و داده‌های مربوط به هزینه تأخیر را به رهبری ارائه داد و یک منبع اختصاصی از تیم دیگر دریافت کرد.", "result": "تحویل وابستگی قابل پیش‌بینی شد، اهداف اسپرینت محقق شد و روحیه تیم به شدت افزایش یافت.", "skillsUsed": ["مدیریت ریسک", "مدیریت ذی‌نفعان", "ارتباطات مبتنی بر داده"] },
     "commonMistakes": [
-      "Not tracking impediments systematically",
-      "Waiting for team to escalate instead of proactively asking",
-      "Taking on blockers you should delegate to team",
-      "Not following up on escalated impediments",
-      "Treating symptoms instead of fixing root causes"
+      "تبدیل شدن به «برطرف‌کننده ارشد موانع» به جای توانمندسازی تیم.",
+      "پیگیری ریسک‌ها فقط در ابتدای پروژه و عدم بازبینی آن‌ها.",
+      "عدم تمایز بین یک مانع سطح تیمی و یک مانع سازمانی.",
+      "عدم نمایش ریسک‌ها و موانع به همه.",
+      "پیچیده کردن بیش از حد برنامه‌های کاهش ریسک."
     ],
     "interviewQuestions": [
-      "How do you prioritize which impediments to tackle first?",
-      "Describe a time you escalated a blocker. What was the outcome?",
-      "How do you distinguish between impediments the team should solve vs. ones requiring your intervention?",
-      "What's your approach to recurring impediments?"
+      "فرآیند خود را برای شناسایی و مدیریت ریسک‌ها در یک پروژه توصیف کنید.",
+      "زمانی را توصیف کنید که مجبور به ارجاع یک مانع مهم شدید. نتیجه چه بود؟",
+      "چگونه یک تیم را برای حل موانع خود کوچ می‌کنید؟",
+      "تفاوت بین ریسک، مسئله و وابستگی چیست؟"
     ]
   },
-  {
-    "skillName": "Risk, Issue & Dependency Management (RAID)",
-    "category": "Delivery Management & Execution",
-    "marketDemand": "60-80%",
-    "skillType": "Essential Skill",
-    "requiredForLevel": { "entry": "3/5", "mid": "4/5", "senior": "5/5" },
-    "whatItLooksLike": [
-      "Maintains comprehensive RAID log with risk probability/impact matrix and mitigation strategies",
-      "Identifies potential risks 2-3 sprints ahead and implements preventive actions",
-      "Manages dependencies across 5+ teams using visual dependency board updated daily",
-      "Reduces critical risks from 15 to 3 over a quarter through proactive management",
-      "Presents risk status to steering committee with clear trend analysis and recommended actions"
-    ],
-    "proofPoints": [
-      "95% of risks have documented mitigation plans",
-      "Zero 'surprise' issues that could have been predicted",
-      "Critical dependencies reduced by 30% through architectural improvements",
-      "Risk materialization rate <20% due to effective mitigation",
-      "Steering committee rates risk reporting as 'excellent' (9/10+)"
-    ],
-    "resourcesNeeded": { "time": "3-5 hours per week for active management", "budget": "£500-1,000 / $600-1,200", "tools": ["RAID log tool (Jira, Excel, specialized software)", "Dependency mapping tool"], "support": "Risk management expert or PMO for guidance" },
-    "realStoryExample": { "persona": "Michelle, Senior ADM at Telecommunications Company", "challenge": "Major product launch at risk due to 12 critical dependencies across 6 teams, no clear tracking", "action": "Created visual dependency board, daily standup across teams, weekly risk review with mitigation actions", "result": "Launch delivered on time with zero critical issues, dependencies resolved 2 weeks early, CEO commendation", "skillsUsed": ["RAID Management", "Cross-Team Coordination", "Strategic Planning"] },
-    "commonMistakes": [
-      "Creating RAID log then never updating it",
-      "Not assigning clear owners to each risk/issue",
-      "Treating all risks equally instead of prioritizing by impact",
-      "Managing dependencies informally without documentation",
-      "Not escalating high-impact risks to appropriate stakeholders"
-    ],
-    "interviewQuestions": [
-      "How do you identify and assess risks on your projects?",
-      "Walk me through your approach to managing dependencies across multiple teams.",
-      "Describe a time when a risk materialized despite your planning. What did you learn?",
-      "How do you decide which risks to escalate vs. manage at team level?"
-    ]
-  },
-  {
-    "skillName": "Release Planning & Coordination",
-    "category": "Delivery Management & Execution",
-    "marketDemand": "70-80%",
-    "skillType": "Core Competency",
-    "requiredForLevel": { "entry": "3/5", "mid": "4/5", "senior": "5/5" },
-    "whatItLooksLike": [
-      "Creates release plans showing feature roadmap for next 3-6 months with dependencies",
-      "Coordinates releases across 4 teams with zero deployment conflicts",
-      "Achieves 95%+ on-time release delivery with committed scope",
-      "Facilitates release readiness reviews with cross-functional stakeholders (QA, InfoSec, Ops)",
-      "Implements release automation reducing deployment time from 4 hours to 30 minutes"
-    ],
-    "proofPoints": [
-      "Last 10 releases delivered within ±2 days of target date",
-      "Release defect rate <5 critical bugs per release",
-      "Post-release incidents reduced by 60% through better coordination",
-      "Stakeholder satisfaction with release process 8.5/10+",
-      "Release cycle time reduced by 40% over 6 months"
-    ],
-    "resourcesNeeded": { "time": "8-12 hours per release cycle", "budget": "£200-800 / $250-1,000 (tools and training)", "tools": ["Release management software", "Deployment automation tools", "Communication platforms"], "support": "DevOps team, Infrastructure team, QA team collaboration" },
-    "realStoryExample": { "persona": "Carlos, Mid-Level ADM at E-commerce Platform", "challenge": "Holiday season release with 6 critical features across 4 teams, high risk if anything fails", "action": "Created detailed release plan, daily sync meetings 2 weeks before launch, staged rollout with monitoring", "result": "Flawless release during peak shopping season, zero downtime, all features live, $2M additional revenue captured", "skillsUsed": ["Release Planning", "Risk Management", "Cross-Team Coordination", "Stakeholder Management"] },
-    "commonMistakes": [
-      "Not having rollback plan documented and tested",
-      "Surprising stakeholders with last-minute release delays",
-      "Inadequate testing before production deployment",
-      "Not coordinating with dependent teams",
-      "Releasing everything at once instead of staged approach"
-    ],
-    "interviewQuestions": [
-      "How do you plan and coordinate releases across multiple teams?",
-      "What's in your release readiness checklist?",
-      "Describe a release that went wrong. What did you learn?",
-      "How do you balance the desire for continuous deployment with the need for stability?"
-    ]
-  },
-  {
-    "skillName": "Quality Assurance Integration",
-    "category": "Delivery Management & Execution",
-    "marketDemand": "65-75%",
-    "skillType": "Essential Skill",
-    "requiredForLevel": { "entry": "3/5", "mid": "4/5", "senior": "4/5" },
-    "whatItLooksLike": [
-      "Facilitates 'Three Amigos' sessions (Dev, QA, BA) resulting in clear acceptance criteria before coding starts",
-      "Implements shift-left testing strategy increasing automated test coverage from 30% to 75%",
-      "Reduces production defects by 50% through improved Definition of Done including quality gates",
-      "Creates quality metrics dashboard showing test coverage, defect density, escaped defects",
-      "Embeds QA throughout delivery lifecycle, not just at end (testing in parallel with development)"
-    ],
-    "proofPoints": [
-      "Defect escape rate to production reduced by 40%+",
-      "Test automation coverage increased from <30% to 70%+",
-      "Testing time reduced by 30% through automation and parallel testing",
-      "Zero releases with critical bugs in last 6 months",
-      "QA satisfaction with collaboration process 9/10+"
-    ],
-    "resourcesNeeded": { "time": "4-6 hours per week for quality initiatives", "budget": "£500-2,000 / $600-2,500 (tools and training)", "tools": ["Test automation tools", "Quality metrics dashboards", "Bug tracking systems"], "support": "QA lead, test automation engineers, development team buy-in" },
-    "realStoryExample": { "persona": "Nina, Entry-Level ADM at Financial Services", "challenge": "QA bottleneck at end of sprint causing 30% of stories to carry over, production bugs increasing", "action": "Introduced Three Amigos, moved QA involvement to refinement, prioritized test automation, updated DoD", "result": "Carry-over reduced to 8%, production bugs down 55%, sprint predictability improved from 68% to 91%", "skillsUsed": ["QA Integration", "Process Optimization", "Cross-Functional Collaboration"] },
-    "commonMistakes": [
-      "Treating QA as final gate instead of integrated throughout",
-      "Not involving QA in refinement and planning",
-      "Ignoring test automation investment",
-      "Accepting 'works on my machine' without proper testing",
-      "Not measuring quality metrics systematically"
-    ],
-    "interviewQuestions": [
-      "How do you integrate quality assurance throughout the delivery lifecycle?",
-      "What's your approach to test automation?",
-      "How do you handle pressure to skip testing to meet deadlines?",
-      "Explain the 'shift-left' testing concept and its benefits."
-    ]
-  },
-  {
-    "skillName": "Servant Leadership",
-    "category": "Leadership & People Skills",
-    "marketDemand": "90-95%",
-    "skillType": "Core Philosophy",
-    "requiredForLevel": { "entry": "3/5", "mid": "4/5", "senior": "5/5" },
-    "whatItLooksLike": [
-      "Consistently asks 'How can I help?' instead of directing team's work",
-      "Credits team publicly for successes, takes responsibility personally for failures",
-      "Makes decisions that benefit team even when personally inconvenient (e.g., taking late meetings for distributed teams)",
-      "Removes obstacles preventing team success rather than managing task completion",
-      "Develops team members' skills and careers actively, celebrates when they're promoted away"
-    ],
-    "proofPoints": [
-      "360 feedback shows team perceives you as supportive leader (8.5/10+)",
-      "Team members seek your guidance voluntarily, not just when required",
-      "Team autonomy increases: they solve 70%+ of problems without your involvement",
-      "Zero turnover on team over 18 months (vs. org average 15-20%)",
-      "Team members actively recommend working with you to others"
-    ],
-    "resourcesNeeded": { "time": "Ongoing mindset and behavioral change", "budget": "£1,200-2,000 / $1,400-2,400", "tools": ["360 feedback platform", "Coaching resources"], "support": "Executive coach or mentor for accountability" },
-    "realStoryExample": { "persona": "James, Mid-Level ADM at Software Company", "challenge": "Promoted from developer, struggled with 'command and control' tendencies, team disengaged", "action": "Worked with coach on servant leadership, started asking instead of telling, removed ego from decisions", "result": "Team engagement scores increased 40%, innovation ideas from team tripled, retention improved to 95%", "skillsUsed": ["Servant Leadership", "Self-Awareness", "Team Empowerment"] },
-    "commonMistakes": [
-      "Saying 'servant leadership' but still micromanaging",
-      "Solving all team problems instead of coaching them to solve",
-      "Taking credit for team's work",
-      "Making unilateral decisions without team input",
-      "Focusing on your career advancement over team development"
-    ],
-    "interviewQuestions": [
-      "What does servant leadership mean to you? Give a concrete example.",
-      "Describe a time you made a decision that benefited the team but was personally inconvenient.",
-      "How do you balance serving the team with holding them accountable?",
-      "Tell me about a team member you developed who went on to greater success."
-    ]
-  },
-  {
-    "skillName": "Team Building & Psychological Safety",
-    "category": "Leadership & People Skills",
-    "marketDemand": "75-80%",
-    "skillType": "High-Impact Skill",
-    "requiredForLevel": { "entry": "3/5", "mid": "4/5", "senior": "5/5" },
-    "whatItLooksLike": [
-      "Team members openly admit mistakes in retrospectives without fear of blame",
-      "Junior developers ask 'basic' questions in meetings without hesitation",
-      "Team challenges decisions respectfully, including yours, leading to better outcomes",
-      "Psychological safety survey scores improve from 6/10 to 9/10 over 6 months",
-      "Team self-organizes effectively with minimal ADM intervention"
-    ],
-    "proofPoints": [
-      "Team psychological safety scores 8.5/10+ (measured via survey)",
-      "Zero team conflicts escalated to HR in 12 months",
-      "Innovation suggestions from team increase 300%",
-      "Team members actively participate in decisions (80%+ speak up)",
-      "New team members feel safe to contribute within 2 weeks (vs. 6-8 weeks typical)"
-    ],
-    "resourcesNeeded": { "time": "3-5 hours per week for team culture work", "budget": "£300-1,000 / $350-1,200 annually", "tools": ["Survey tools (Google Forms, Officevibe)", "Team building materials"], "support": "HR support for serious conflicts, organizational culture alignment" },
-    "realStoryExample": { "persona": "Yuki, Senior ADM at Tech Startup", "challenge": "High-performing but toxic team culture, 3 people quit in 6 months citing 'fear culture'", "action": "Addressed toxic behaviors directly, established psychological safety norms, modeled vulnerability, recognized good behaviors", "result": "Culture transformed in 9 months, zero attrition, productivity increased 25%, team nominated for company culture award", "skillsUsed": ["Psychological Safety", "Conflict Resolution", "Team Building", "Courageous Leadership"] },
-    "commonMistakes": [
-      "Punishing failure or mistakes",
-      "Allowing 'brilliant jerks' to harm team culture",
-      "Not addressing toxic behaviors quickly",
-      "Creating superficial team building without addressing real issues",
-      "Talking about psychological safety without modeling it"
-    ],
-    "interviewQuestions": [
-      "What is psychological safety and why does it matter?",
-      "How do you handle a team member who dominates discussions?",
-      "Describe a time you built trust in a struggling team.",
-      "How do you balance accountability with psychological safety?"
-    ]
-  },
-  {
-    "skillName": "Coaching & Mentoring",
-    "category": "Leadership & People Skills",
-    "marketDemand": "75-85%",
-    "skillType": "Core Competency",
-    "requiredForLevel": { "entry": "2/5", "mid": "4/5", "senior": "5/5" },
-    "whatItLooksLike": [
-      "Uses powerful questions ('What have you tried?' 'What else?') instead of providing answers",
-      "Team members solve 80% of problems independently after 6 months of coaching",
-      "Successfully mentors 2-3 junior ADMs who progress to mid-level roles",
-      "Team agile maturity improves from 'Forming' to 'Performing' stage over 9 months",
-      "Recognized internally as 'go-to' person for developing delivery capability"
-    ],
-    "proofPoints": [
-      "3+ team members report significant career progression due to your coaching",
-      "Team problem-solving speed improves 40% (they figure things out faster)",
-      "Mentees achieve certification or promotion within 12 months",
-      "Coaching feedback score 9/10+ from coachees",
-      "Team demonstrates continuous learning mindset (reads books, shares learnings)"
-    ],
-    "resourcesNeeded": { "time": "3-5 hours per week for coaching activities", "budget": "£1,500-2,500 / $1,800-3,000", "tools": ["Development planning templates", "Coaching frameworks"], "support": "Professional coach for your own development, peer coaching community" },
-    "realStoryExample": { "persona": "Patricia, Senior ADM at Healthcare Company", "challenge": "Junior ADM struggling with stakeholder management, considering leaving role", "action": "6-month structured mentoring: shadowing, feedback sessions, gradual responsibility increase, celebration of wins", "result": "Junior ADM became confident stakeholder manager, received 'Rising Star' award, now mentors others", "skillsUsed": ["Coaching", "Mentoring", "Patience", "Development Planning"] },
-    "commonMistakes": [
-      "Telling instead of asking (advice-giving instead of coaching)",
-      "Not giving people space to struggle and learn",
-      "Coaching everyone the same way without adapting",
-      "Only coaching when problems arise instead of proactively",
-      "Not establishing clear coaching agreements and goals"
-    ],
-    "interviewQuestions": [
-      "What's the difference between coaching and mentoring?",
-      "Describe your approach to developing someone who's struggling.",
-      "Tell me about someone you coached who went on to success.",
-      "How do you know when to coach vs. when to direct?"
-    ]
-  },
-  {
-    "skillName": "Conflict Resolution & Facilitation",
-    "category": "Leadership & People Skills",
-    "marketDemand": "70-80%",
-    "skillType": "Essential Skill",
-    "requiredForLevel": { "entry": "3/5", "mid": "4/5", "senior": "5/5" },
-    "whatItLooksLike": [
-      "Addresses team conflicts within 24 hours before they escalate",
-      "Facilitates difficult Product-Engineering priority conversations resulting in win-win outcomes",
-      "Uses active listening to understand root cause of conflicts beyond surface symptoms",
-      "Reduces team conflict escalations to HR by 80% through early intervention",
-      "Creates space for disagreement while maintaining respect and team cohesion"
-    ],
-    "proofPoints": [
-      "Resolved 15+ significant team conflicts over 12 months with lasting resolution",
-      "Zero conflicts escalated to HR that you managed directly",
-      "Team members come to you proactively for conflict mediation",
-      "Post-conflict team effectiveness ratings remain high (8/10+)",
-      "Facilitation feedback consistently rates 9/10+ for managing difficult conversations"
-    ],
-    "resourcesNeeded": { "time": "2-4 hours per week for conflict situations", "budget": "£400-1,500 / $500-1,800", "tools": ["Private meeting space", "Conflict resolution frameworks"], "support": "HR partnership for severe conflicts, coaching for your development" },
-    "realStoryExample": { "persona": "Omar, Mid-Level ADM at Media Company", "challenge": "Two senior developers in ongoing feud affecting whole team, standups becoming tense, productivity down 20%", "action": "1-on-1 conversations with each to understand root cause, facilitated joint conversation, created working agreements, followed up weekly", "result": "Conflict resolved, underlying issue (unclear architecture ownership) addressed, team productivity recovered and exceeded baseline", "skillsUsed": ["Conflict Resolution", "Active Listening", "Facilitation", "Follow-through"] },
-    "commonMistakes": [
-      "Avoiding conflict hoping it will resolve itself",
-      "Taking sides in team disputes",
-      "Addressing conflict publicly instead of privately first",
-      "Focusing on positions instead of underlying interests",
-      "Not following up after initial conflict resolution"
-    ],
-    "interviewQuestions": [
-      "How do you handle conflict between team members?",
-      "Describe a time you mediated a difficult situation. What was your approach?",
-      "What's your conflict resolution style?",
-      "How do you facilitate disagreement while maintaining team cohesion?"
-    ]
-  },
-  {
-    "skillName": "Change Management & Transformation Leadership",
-    "category": "Leadership & People Skills",
-    "marketDemand": "50-55% (GROWING)",
-    "skillType": "Senior-Level Skill",
-    "requiredForLevel": { "entry": "1/5", "mid": "3/5", "senior": "4/5" },
-    "whatItLooksLike": [
-      "Leads agile transformation for 100+ person organization with 75% adoption success rate",
-      "Creates change roadmap with stakeholder analysis, communication plan, and success metrics",
-      "Reduces resistance to change from 60% to 20% through effective engagement strategies",
-      "Measures transformation impact: 40% faster delivery, 30% higher employee engagement",
-      "Coaches executives on leading through organizational change"
-    ],
-    "proofPoints": [
-      "Successfully led 2+ organizational transformations with measurable outcomes",
-      "Change adoption rate >70% within 6 months",
-      "Employee engagement scores improve during transformation (unusual achievement)",
-      "Executive sponsor satisfaction 9/10+ with transformation leadership",
-      "Published case study or presented at conference on transformation success"
-    ],
-    "resourcesNeeded": { "time": "15-25 hours per week during active transformation", "budget": "£2,000-5,000 / $2,500-6,000", "tools": ["Change management software", "Communication platforms", "Survey tools"], "support": "Executive sponsorship, change management consultant, transformation team" },
-    "realStoryExample": { "persona": "Samantha, Lead ADM at Retail Corporation", "challenge": "5,000-person organization attempting SAFe transformation, previous attempt failed, skepticism high", "action": "Built coalition of early adopters, created visible quick wins, addressed resistance with empathy, measured and communicated progress", "result": "18-month transformation: 85% SAFe adoption, delivery speed increased 45%, employee satisfaction up 22%, became VP of Transformation", "skillsUsed": ["Change Management", "Strategic Leadership", "Stakeholder Engagement", "Resilience"] },
-    "commonMistakes": [
-      "Underestimating resistance to change",
-      "Not creating sense of urgency",
-      "Declaring victory too early",
-      "Focusing on process changes without culture change",
-      "Insufficient communication throughout transformation"
-    ],
-    "interviewQuestions": [
-      "How do you lead an organization through significant change?",
-      "Describe a transformation you led. What were the biggest challenges?",
-      "How do you handle resistance to change?",
-      "What change management frameworks or models do you use?"
-    ]
-  },
-  {
-    "skillName": "Communication Excellence (Verbal & Written)",
-    "category": "Communication & Stakeholder Management",
-    "marketDemand": "98-100%",
-    "skillType": "#1 Most Critical Skill",
-    "requiredForLevel": { "entry": "3/5", "mid": "4/5", "senior": "5/5" },
-    "whatItLooksLike": [
-      "Presents quarterly delivery updates to C-suite in 10 minutes with clear, compelling story",
-      "Translates complex technical concepts for business stakeholders without losing accuracy",
-      "Writes concise status updates that executives actually read (no follow-up questions needed)",
-      "Adapts communication style seamlessly: technical with engineers, strategic with executives, tactical with peers",
-      "Facilitates workshops with 30+ people from diverse backgrounds maintaining engagement and clarity"
-    ],
-    "proofPoints": [
-      "Presentation feedback consistently 9/10+ from diverse audiences",
-      "Executive stakeholders request you specifically for updates",
-      "Zero 'clarification needed' follow-ups on written communications for 3 months",
-      "Successfully influenced major decision through compelling presentation",
-      "Team and stakeholders rate communication as top strength in 360 feedback"
-    ],
-    "resourcesNeeded": { "time": "5-7 hours per week for improvement activities", "budget": "£1,000-2,500 / $1,200-3,000", "tools": ["Presentation software", "Recording device", "Communication frameworks"], "support": "Speaking coach or mentor for feedback" },
-    "realStoryExample": { "persona": "Aisha, Mid-Level ADM at Consulting Firm", "challenge": "Brilliant at delivery but presentations rambled, executives confused, missed promotion twice due to 'communication gaps'", "action": "Hired presentation coach, joined Toastmasters, practiced Pyramid Principle, recorded all presentations for self-review", "result": "Presentation skills transformed, invited to present at client board meetings, promoted to Senior within 12 months", "skillsUsed": ["Communication Excellence", "Self-Development", "Executive Presence"] },
-    "commonMistakes": [
-      "Using jargon with non-technical audiences",
-      "Providing too much detail instead of executive summary first",
-      "Reading slides instead of engaging audience",
-      "Not adapting communication style to audience",
-      "Burying the lead—not stating conclusion upfront"
-    ],
-    "interviewQuestions": [
-      "How do you communicate technical issues to non-technical stakeholders?",
-      "Describe a time you had to influence without authority through communication.",
-      "Give me an elevator pitch on the value of Agile delivery management.",
-      "How do you tailor your communication to different audiences?"
-    ]
-  },
-  {
-    "skillName": "Stakeholder Management & Engagement",
-    "category": "Communication & Stakeholder Management",
-    "marketDemand": "85-90%",
-    "skillType": "Critical Success Factor",
-    "requiredForLevel": { "entry": "3/5", "mid": "4/5", "senior": "5/5" },
-    "whatItLooksLike": [
-      "Creates stakeholder map with power/interest matrix and tailored engagement strategies",
-      "Achieves 95% stakeholder satisfaction rating in surveys",
-      "Builds executive sponsors who actively advocate for your initiatives",
-      "Successfully negotiates for team resources and budget through compelling stakeholder engagement",
-      "Proactively manages expectations preventing 90% of potential conflicts"
-    ],
-    "proofPoints": [
-      "Stakeholder satisfaction scores 8.5/10+ consistently",
-      "Secured 3+ additional resources through stakeholder advocacy",
-      "Executive sponsors actively defend your team's priorities",
-      "Zero stakeholder escalations in last 6 months",
-      "Successfully navigated political landscape to deliver controversial project"
-    ],
-    "resourcesNeeded": { "time": "6-10 hours per week for stakeholder activities", "budget": "£1,600-2,800 / $1,900-3,300", "tools": ["Stakeholder mapping tools", "CRM or tracking system"], "support": "Mentor experienced in organizational politics" },
-    "realStoryExample": { "persona": "Kevin, Senior ADM at Government Agency", "challenge": "Critical modernization project blocked by competing priorities from 8 different departments", "action": "Mapped all stakeholders, identified win-win outcomes for each, built coalition, secured executive champion", "result": "Project greenlit with full funding, all departments aligned, delivered 20% under budget earning commendation", "skillsUsed": ["Stakeholder Management", "Negotiation", "Strategic Thinking", "Coalition Building"] },
-    "commonMistakes": [
-      "Not identifying all stakeholders (especially indirect ones)",
-      "Treating all stakeholders the same",
-      "Only engaging when you need something",
-      "Under-communicating or over-communicating",
-      "Not understanding stakeholders' motivations and concerns"
-    ],
-    "interviewQuestions": [
-      "How do you identify and prioritize stakeholders?",
-      "Describe a time you managed conflicting stakeholder expectations.",
-      "How do you build relationships with difficult stakeholders?",
-      "Walk me through your stakeholder engagement strategy."
-    ]
-  },
-  {
-    "skillName": "Transparency & Visibility Creation",
-    "category": "Communication & Stakeholder Management",
-    "marketDemand": "80-85%",
-    "skillType": "Core Responsibility",
-    "requiredForLevel": { "entry": "4/5", "mid": "4/5", "senior": "5/5" },
-    "whatItLooksLike": [
-      "Creates 'war room' with big visible charts showing real-time delivery status, risks, blockers",
-      "Designs executive dashboard with RAG status that requires zero explanation",
-      "Reduces ad-hoc status request emails by 70% through proactive visibility",
-      "Implements information radiators that stakeholders check daily without prompting",
-      "Builds automated reports pulling from Jira eliminating manual status compilation"
-    ],
-    "proofPoints": [
-      "Status requests reduced by 60%+ through proactive visibility",
-      "Stakeholders can answer their own questions 80% of time from dashboards",
-      "Real-time information always available (not outdated)",
-      "Leadership rates transparency as 9/10+ in effectiveness",
-      "Zero 'surprise' issues discovered late due to poor visibility"
-    ],
-    "resourcesNeeded": { "time": "3-5 hours per week maintaining visibility systems", "budget": "£300-1,500 / $350-1,800", "tools": ["Dashboard software", "Automation tools", "Visual management materials"], "support": "Data analyst or BI team for complex dashboards" },
-    "realStoryExample": { "persona": "Lisa, Entry-Level ADM at Manufacturing Company", "challenge": "Senior leadership constantly asking for status updates, team interrupted 10+ times per week", "action": "Built automated dashboard with daily updates, implemented visual boards, created weekly digest email", "result": "Interruptions reduced 85%, leadership satisfaction improved, team productivity increased 15%", "skillsUsed": ["Transparency", "Data Visualization", "Automation", "Stakeholder Management"] },
-    "commonMistakes": [
-      "Creating dashboards that nobody looks at",
-      "Too much information causing confusion",
-      "Not updating information regularly (stale data)",
-      "Using jargon or metrics stakeholders don't understand",
-      "Building transparency tools without asking stakeholders what they need"
-    ],
-    "interviewQuestions": [
-      "How do you create visibility into team delivery status?",
-      "What metrics do you make visible and why?",
-      "Describe a time you improved transparency. What was the impact?",
-      "How do you balance transparency with information overload?"
-    ]
-  },
-  {
-    "skillName": "Cross-Functional Collaboration",
-    "category": "Communication & Stakeholder Management",
-    "marketDemand": "85-90%",
-    "skillType": "Essential Capability",
-    "requiredForLevel": { "entry": "3/5", "mid": "4/5", "senior": "5/5" },
-    "whatItLooksLike": [
-      "Orchestrates delivery across Engineering, Product, QA, InfoSec, Legal, and Operations seamlessly",
-      "Reduces cross-functional handoff delays by 50% through improved coordination",
-      "Facilitates regular cross-functional planning sessions with 95% attendance",
-      "Builds 'one team' culture across functions that traditionally operate in silos",
-      "Successfully delivers complex initiatives requiring 6+ functional areas without friction"
-    ],
-    "proofPoints": [
-      "Cross-functional handoff time reduced by 40%+",
-      "All functions rate collaboration quality 8/10+",
-      "Zero last-minute blockers from functions 'not being informed'",
-      "Successfully delivered 3+ complex projects requiring extensive cross-functional coordination",
-      "Other teams request your facilitation for cross-functional initiatives"
-    ],
-    "resourcesNeeded": { "time": "8-12 hours per week for cross-functional coordination", "budget": "£500-1,500 / $600-1,800", "tools": ["Collaboration platforms", "Dependency tracking tools"], "support": "Executive backing for cross-functional authority" },
-    "realStoryExample": { "persona": "Raj, Mid-Level ADM at Financial Services", "challenge": "Mobile app release delayed 6 weeks because InfoSec review 'not scheduled', Legal approval 'not requested'", "action": "Created cross-functional delivery checklist, established InfoSec/Legal review SLAs, implemented early engagement process", "result": "Next release delivered on time, cross-functional delays reduced from 6 weeks to 3 days, model adopted company-wide", "skillsUsed": ["Cross-Functional Collaboration", "Process Design", "Relationship Building"] },
-    "commonMistakes": [
-      "Engaging functions too late in the process",
-      "Not understanding each function's constraints and priorities",
-      "Treating other functions as 'service providers' instead of partners",
-      "Not building relationships before you need them",
-      "Assuming everyone understands technical/agile concepts"
-    ],
-    "interviewQuestions": [
-      "How do you coordinate delivery across multiple functions?",
-      "Describe a time you broke down silos between teams.",
-      "How do you handle competing priorities across functions?",
-      "What's your approach to engaging InfoSec/Legal/Compliance in delivery?"
-    ]
-  },
-  {
-    "skillName": "Negotiation & Influencing Without Authority",
-    "category": "Communication & Stakeholder Management",
-    "marketDemand": "65-70%",
-    "skillType": "Power Skill",
-    "requiredForLevel": { "entry": "2/5", "mid": "3/5", "senior": "5/5" },
-    "whatItLooksLike": [
-      "Secures additional headcount for team through compelling business case without formal authority",
-      "Influences Product to prioritize technical debt reduction achieving 60/40 feature/debt split",
-      "Navigates organizational politics to gain support for controversial process change",
-      "Negotiates win-win outcomes in resource conflicts between competing teams",
-      "Drives organizational change through coalition building rather than mandate"
-    ],
-    "proofPoints": [
-      "Successfully negotiated for resources 5+ times resulting in team capability improvements",
-      "Influenced major organizational decision without formal authority",
-      "Win-win negotiation outcomes in 85%+ of situations",
-      "Stakeholders actively seek your involvement in contentious negotiations",
-      "Built coalition of 15+ people supporting significant change initiative"
-    ],
-    "resourcesNeeded": { "time": "Variable based on negotiations, 5-10 hours per week", "budget": "£2,200-4,000 / $2,600-4,800", "tools": ["Negotiation frameworks", "Influence models"], "support": "Mentor skilled in organizational influence" },
-    "realStoryExample": { "persona": "Maria, Senior ADM at Tech Company", "challenge": "Engineering team needed 2 additional developers but hiring freeze in place, formal requests denied", "action": "Built business case showing $500K revenue impact, secured Product sponsorship, presented at leadership meeting, offered budget trade-offs", "result": "Approved for 2 contractors within budget, later converted to permanent hires, team delivered 40% more value", "skillsUsed": ["Negotiation", "Influence", "Business Case Development", "Coalition Building"] },
-    "commonMistakes": [
-      "Using positional power instead of influence when you have it",
-      "Not understanding the other party's interests and constraints",
-      "Negotiating zero-sum instead of seeking win-win",
-      "Not building relationships before needing to influence",
-      "Giving up too easily when first attempt fails"
-    ],
-    "interviewQuestions": [
-      "Describe a time you influenced a decision without formal authority.",
-      "How do you negotiate when you don't have leverage?",
-      "Tell me about a failed negotiation and what you learned.",
-      "What influence strategies do you find most effective?"
-    ]
-  },
-  {
-    "skillName": "Flow Metrics & Value Stream Analytics",
-    "category": "Metrics, Analytics & Data-Driven Decision Making",
-    "marketDemand": "40-50% (EMERGING STANDARD)",
-    "skillType": "Differentiator",
-    "requiredForLevel": { "entry": "2/5", "mid": "3/5", "senior": "4/5" },
-    "whatItLooksLike": [
-      "Replaces velocity tracking with Flow Time, Flow Load, Flow Velocity, Flow Efficiency",
-      "Reduces average cycle time by 35% through bottleneck identification and elimination",
-      "Uses cumulative flow diagrams to predict delivery dates with 90% accuracy",
-      "Presents flow efficiency analysis to leadership showing 20% value-added vs. 80% wait time",
-      "Implements flow-based delivery approach resulting in 2x throughput improvement"
-    ],
-    "proofPoints": [
-      "Average cycle time reduced by 30%+ over 6 months",
-      "Flow efficiency improved from <20% to >35%",
-      "Delivery forecasts within ±10% accuracy",
-      "Identified and eliminated 3+ major bottlenecks using flow data",
-      "Leadership uses flow metrics to make strategic decisions"
-    ],
-    "resourcesNeeded": { "time": "4-6 hours per week for metrics analysis", "budget": "£1,700-2,500 / $2,000-3,000", "tools": ["ActionableAgile Analytics", "Jira with advanced reporting", "Flow metrics dashboard"], "support": "Flow metrics expert or Kanban coach" },
-    "realStoryExample": { "persona": "Derek, Mid-Level ADM at SaaS Company", "challenge": "Team claiming to be 'fast' but features taking 45 days average from start to done, unclear why", "action": "Implemented flow metrics tracking, discovered 70% wait time in code review and testing, addressed bottlenecks", "result": "Cycle time reduced to 18 days (60% improvement), throughput doubled, flow efficiency increased to 45%", "skillsUsed": ["Flow Metrics", "Data Analysis", "Bottleneck Identification", "Process Optimization"] },
-    "commonMistakes": [
-      "Continuing to use velocity when flow metrics are more appropriate",
-      "Not distinguishing between cycle time and lead time",
-      "Ignoring flow efficiency (% value-added time)",
-      "Using flow metrics to judge individuals instead of improving system",
-      "Not acting on insights from flow data"
-    ],
-    "interviewQuestions": [
-      "Explain the difference between velocity and flow metrics.",
-      "What is flow efficiency and why does it matter?",
-      "How do you use flow metrics to improve delivery?",
-      "Walk me through how you'd calculate cycle time for your team."
-    ]
-  },
-  {
-    "skillName": "Traditional Agile Metrics (Velocity, Burn-down)",
-    "category": "Metrics, Analytics & Data-Driven Decision Making",
-    "marketDemand": "80-85%",
-    "skillType": "Baseline Competency",
-    "requiredForLevel": { "entry": "4/5", "mid": "4/5", "senior": "4/5" },
-    "whatItLooksLike": [
-      "Achieves stable, predictable velocity within ±15% over 6+ sprints",
-      "Uses historical velocity to forecast release dates with 90% accuracy",
-      "Creates burn-down charts that drive daily team conversations about progress",
-      "Educates stakeholders on appropriate velocity interpretation (not a productivity measure)",
-      "Identifies team health issues early through velocity trends and patterns"
-    ],
-    "proofPoints": [
-      "Team velocity stable within ±15% for 6+ sprints",
-      "Velocity-based forecasts accurate within ±10%",
-      "Stakeholders understand velocity is team-specific, not comparable across teams",
-      "Zero gaming of velocity metrics (honest estimation maintained)",
-      "Can explain velocity trends and what they indicate about team health"
-    ],
-    "resourcesNeeded": { "time": "2-3 hours per week for metrics tracking and analysis", "budget": "Minimal (£0-200 / $0-250 for tools)", "tools": ["Jira or similar with velocity tracking", "Reporting dashboards"], "support": "Team collaboration for honest estimation" },
-    "realStoryExample": { "persona": "Hannah, Entry-Level ADM at Healthcare Tech", "challenge": "Stakeholders demanding team 'increase velocity' by 50%, not understanding metrics properly", "action": "Educated stakeholders on velocity purpose, showed stable velocity = healthy team, used forecasting to set realistic expectations", "result": "Pressure removed, team morale improved, focus shifted to value delivery vs. velocity gaming", "skillsUsed": ["Metrics Understanding", "Stakeholder Education", "Team Advocacy"] },
-    "commonMistakes": [
-      "Comparing velocity across different teams",
-      "Using velocity as productivity measure for individuals",
-      "Pressuring team to 'increase velocity' causing gaming",
-      "Not addressing causes of velocity instability",
-      "Forecasting with insufficient historical data (<3 sprints)"
-    ],
-    "interviewQuestions": [
-      "How do you calculate and use velocity?",
-      "What causes velocity to fluctuate and how do you address it?",
-      "How do you prevent velocity gaming?",
-      "Explain how you'd forecast a release date using velocity."
-    ]
-  },
-  {
-    "skillName": "Team Health & Happiness Metrics",
-    "category": "Metrics, Analytics & Data-Driven Decision Making",
-    "marketDemand": "65-75%",
-    "skillType": "Essential for Retention",
-    "requiredForLevel": { "entry": "3/5", "mid": "4/5", "senior": "5/5" },
-    "whatItLooksLike": [
-      "Conducts monthly Spotify Squad Health Check with team achieving 8/10+ average scores",
-      "Improves team happiness scores by 30% over 6 months through targeted interventions",
-      "Reduces team turnover from 20% to <8% through proactive health monitoring",
-      "Correlates team health with delivery performance showing strong relationship",
-      "Creates early warning system for burnout and attrition risk"
-    ],
-    "proofPoints": [
-      "Team health scores 8+/10 consistently",
-      "Team retention rate >92% (vs. org average 80-85%)",
-      "Proactively addressed 5+ team health issues before becoming critical",
-      "Demonstrated correlation between team health and delivery performance",
-      "Zero unexpected team departures in 18 months"
-    ],
-    "resourcesNeeded": { "time": "2-3 hours per week for health monitoring and interventions", "budget": "£50-500 / $60-600 annually", "tools": ["Survey tools", "Health check frameworks", "Analytics dashboard"], "support": "HR partnership, organizational support for addressing systemic issues" },
-    "realStoryExample": { "persona": "Sophie, Mid-Level ADM at Gaming Company", "challenge": "Lost 4 team members in 3 months, remaining team demoralized, 'death march' atmosphere", "action": "Implemented health checks, identified burnout from unrealistic deadlines, renegotiated scope, added resources", "result": "Team health scores improved from 4/10 to 8.5/10 over 6 months, zero additional attrition, became 'best team to work on'", "skillsUsed": ["Team Health Monitoring", "Burnout Prevention", "Advocacy", "Change Management"] },
-    "commonMistakes": [
-      "Only measuring team health when problems are obvious",
-      "Not taking action on health metric insights",
-      "Making health checks feel like surveillance instead of support",
-      "Ignoring early warning signs of team issues",
-      "Not addressing systemic organizational issues affecting team health"
-    ],
-    "interviewQuestions": [
-      "How do you measure and monitor team health?",
-      "Describe a time you identified and addressed team burnout.",
-      "What early warning signs do you look for regarding team issues?",
-      "How do you balance delivery pressure with team wellbeing?"
-    ]
-  },
-  {
-    "skillName": "Business Outcome Metrics (ROI, Value Delivery)",
-    "category": "Metrics, Analytics & Data-Driven Decision Making",
-    "marketDemand": "55-65% (INCREASING)",
-    "skillType": "Strategic Differentiator",
-    "requiredForLevel": { "entry": "2/5", "mid": "3/5", "senior": "5/5" },
-    "whatItLooksLike": [
-      "Creates quarterly business value reports showing $2M revenue impact, 30% cost reduction, or 50K new users",
-      "Implements OKRs (Objectives and Key Results) cascading from company to team level",
-      "Demonstrates 5:1 or better ROI on delivery investments through data",
-      "Partners with Product to measure feature success through A/B testing and analytics",
-      "Shifts team mindset from output focus (features delivered) to outcome focus (business value created)"
-    ],
-    "proofPoints": [
-      "Documented $1M+ business value delivery with clear attribution",
-      "Team OKRs aligned to company objectives achieving 70%+ of key results",
-      "Executive presentation showing 5:1 ROI on team investments",
-      "Feature success rate improved 40% through outcome-focused delivery",
-      "Recognized by leadership for business value contribution, not just delivery"
-    ],
-    "resourcesNeeded": { "time": "4-6 hours per week for value measurement and reporting", "budget": "£500-2,000 / $600-2,400", "tools": ["Analytics platforms", "OKR software", "Business intelligence tools"], "support": "Product team, Analytics team, Finance for ROI validation" },
-    "realStoryExample": { "persona": "Jonathan, Senior ADM at E-commerce Platform", "challenge": "Delivered 50 features in a year but no one could articulate business impact, questioned value of team", "action": "Implemented outcome-focused approach, measured business impact of each feature, created quarterly value reports", "result": "Demonstrated $3.2M revenue impact, team budget increased 40%, invited to strategic planning sessions", "skillsUsed": ["Business Outcome Metrics", "Value Measurement", "Strategic Communication", "Product Thinking"] },
-    "commonMistakes": [
-      "Measuring outputs (features shipped) instead of outcomes (business value)",
-      "Not partnering with Product/Analytics for measurement",
-      "Using vanity metrics that don't tie to business results",
-      "Claiming credit for business results not directly attributable to team work",
-      "Not establishing baseline metrics before initiatives"
-    ],
-    "interviewQuestions": [
-      "How do you measure the business value of your team's work?",
-      "Describe a time you demonstrated ROI on a delivery initiative.",
-      "How do you shift a team from output focus to outcome focus?",
-      "Walk me through how you'd create a business case for additional resources."
-    ]
-  },
-  {
-    "skillName": "Predictive Analytics & Forecasting",
-    "category": "Metrics, Analytics & Data-Driven Decision Making",
-    "marketDemand": "30-40% (EMERGING)",
-    "skillType": "Advanced Capability",
-    "requiredForLevel": { "entry": "1/5", "mid": "2/5", "senior": "4/5" },
-    "whatItLooksLike": [
-      "Uses Monte Carlo simulations to forecast completion dates with 85/95 percentile confidence intervals",
-      "Applies probabilistic forecasting achieving accuracy within ±12% of actual",
-      "Identifies delivery trends 2-3 sprints ahead enabling proactive intervention",
-      "Uses advanced analytics tools (ActionableAgile, Jira Align) for predictive insights",
-      "Presents risk-adjusted forecasts to leadership showing probability ranges, not single dates"
-    ],
-    "proofPoints": [
-      "Forecasting accuracy within ±15% of actual delivery for 80% of initiatives",
-      "Leadership makes go/no-go decisions based on probabilistic forecasts",
-      "Predicted delivery risk 2 months in advance allowing mitigation",
-      "Monte Carlo simulations become standard practice for planning",
-      "Recognized as analytical expert within organization"
-    ],
-    "resourcesNeeded": { "time": "3-5 hours per week for analytics and forecasting", "budget": "£800-2,000 / $1,000-2,400", "tools": ["ActionableAgile Analytics", "Power BI or Tableau", "Advanced Excel"], "support": "Data analyst or BI specialist for complex analyses" },
-    "realStoryExample": { "persona": "Emily, Lead ADM at Enterprise Software Company", "challenge": "Leadership demanding delivery date commitments, team velocity unstable, pressure to over-commit", "action": "Implemented probabilistic forecasting with confidence intervals, educated leadership on probabilistic thinking", "result": "Forecasts accurate within 10%, no missed commitments in 18 months, became trusted advisor to C-suite", "skillsUsed": ["Predictive Analytics", "Monte Carlo Simulation", "Statistical Thinking", "Executive Education"] },
-    "commonMistakes": [
-      "Presenting single-date forecasts without confidence intervals",
-      "Using insufficient historical data for predictions",
-      "Not updating forecasts as new data becomes available",
-      "Making forecasts too complex for stakeholders to understand",
-      "Using predictive analytics to punish teams instead of improve planning"
-    ],
-    "interviewQuestions": [
-      "How do you forecast delivery dates with uncertain scope?",
-      "Explain Monte Carlo simulation and when you'd use it.",
-      "How do you communicate probabilistic forecasts to executives?",
-      "What data do you need for accurate delivery forecasting?"
-    ]
-  },
-  {
-    "skillName": "Business & Financial Literacy",
-    "category": "Strategic & Business Acumen",
-    "marketDemand": "50-60% (HIGHER FOR SENIOR ROLES)",
-    "skillType": "Career Accelerator",
-    "requiredForLevel": { "entry": "2/5", "mid": "3/5", "senior": "4/5" },
-    "whatItLooksLike": [
-      "Creates business cases showing 3-year TCO and ROI with NPV calculations",
-      "Discusses delivery work in terms of revenue impact, cost reduction, and profit contribution",
-      "Manages delivery budget of $2M+ with variance <5%",
-      "Presents to board using financial terminology and business rationale",
-      "Understands how company makes money and how delivery contributes to business model"
-    ],
-    "proofPoints": [
-      "Managed annual budget of $1M+ with <5% variance",
-      "Created business case that secured $500K funding",
-      "Present using business terminology fluently",
-      "Finance team rates your budget management as excellent",
-      "Can explain company business model and how delivery contributes"
-    ],
-    "resourcesNeeded": { "time": "3-4 hours per week for business learning", "budget": "£400-1,500 / $500-1,800", "tools": ["Financial modeling templates", "Business case frameworks"], "support": "Finance mentor, CFO office access for learning" },
-    "realStoryExample": { "persona": "Andre, Senior ADM at Retail Company", "challenge": "Proposed platform modernization rejected twice due to 'unclear business value'", "action": "Partnered with Finance, built comprehensive business case showing $2.3M savings over 3 years, presented with ROI/payback", "result": "Project approved with $3M budget, delivered 18% under budget, became VP of Engineering", "skillsUsed": ["Financial Literacy", "Business Case Development", "Executive Communication", "Strategic Thinking"] },
-    "commonMistakes": [
-      "Avoiding financial discussions because 'not comfortable with numbers'",
-      "Not understanding cost implications of delivery decisions",
-      "Focusing only on technical excellence without business context",
-      "Not speaking language of finance when presenting to executives",
-      "Making commitments without understanding budget constraints"
-    ],
-    "interviewQuestions": [
-      "How do you create a business case for a technical initiative?",
-      "Explain ROI and how you'd calculate it for a delivery program.",
-      "How does your work contribute to the company's financial performance?",
-      "Describe a time you managed a significant budget."
-    ]
-  },
-  {
-    "skillName": "Strategic Alignment & Planning",
-    "category": "Strategic & Business Acumen",
-    "marketDemand": "50-60% of senior postings",
-    "skillType": "Leadership Competency",
-    "requiredForLevel": { "entry": "1/5", "mid": "2/5", "senior": "4/5" },
-    "whatItLooksLike": [
-      "Translates company strategy into quarterly team roadmaps showing clear alignment to OKRs",
-      "Creates strategic delivery plans presented to executive leadership",
-      "Participates in annual strategic planning influencing organizational direction",
-      "Ensures 90%+ of team work directly supports company strategic objectives",
-      "Identifies strategic opportunities where delivery capabilities enable business growth"
-    ],
-    "proofPoints": [
-      "Team roadmap explicitly tied to company OKRs with clear rationale",
-      "Invited to participate in strategic planning sessions",
-      "Leadership references your strategic insights in decision-making",
-      "Zero team work that doesn't connect to strategic objectives",
-      "Successfully influenced strategic direction based on delivery insights"
-    ],
-    "resourcesNeeded": { "time": "4-6 hours per week for strategic work", "budget": "£700-2,000 / $800-2,400", "tools": ["OKR software", "Strategy mapping tools", "Portfolio planning tools"], "support": "Executive sponsor, Strategy team access" },
-    "realStoryExample": { "persona": "Michael, Lead ADM at Financial Technology", "challenge": "Team working on projects not aligned to company direction, risk of funding cuts", "action": "Realigned team backlog to company strategy, eliminated 30% non-strategic work, created strategy dashboard", "result": "Team became strategic priority, budget increased 50%, Michael promoted to Director role", "skillsUsed": ["Strategic Alignment", "Portfolio Management", "Stakeholder Management", "Communication"] },
-    "commonMistakes": [
-      "Not understanding company strategy and direction",
-      "Working on 'interesting' projects not aligned to business goals",
-      "Not communicating how delivery work supports strategy",
-      "Waiting to be told what's strategic instead of seeking alignment",
-      "Not questioning work that doesn't connect to strategy"
-    ],
-    "interviewQuestions": [
-      "How do you ensure your team's work aligns with company strategy?",
-      "Describe a time you influenced strategic direction.",
-      "How do you translate business strategy into delivery plans?",
-      "What frameworks do you use for strategic planning?"
-    ]
-  },
+  // --- رهبری و مهارت‌های فردی ---
    {
-    "skillName": "Product Thinking & Customer Centricity",
-    "category": "Strategic & Business Acumen",
-    "marketDemand": "45-55% (INCREASING)",
-    "skillType": "Critical Differentiator",
-    "requiredForLevel": {
-      "entry": "2/5",
-      "mid": "3/5",
-      "senior": "4/5"
-    },
+    "skillName": "رهبری خدمتگزار",
+    "category": "رهبری و مهارت‌های فردی",
+    "marketDemand": "۹۰-۹۵٪",
+    "skillType": "فلسفه اصلی",
+    "requiredForLevel": { "entry": "۳/۵", "mid": "۴/۵", "senior": "۵/۵" },
     "whatItLooksLike": [
-      "Partners with Product to maximize customer value delivery, not just task completion",
-      "Attends customer research sessions to understand user needs firsthand",
-      "Implements customer satisfaction metrics for delivered features (NPS, CSAT, adoption)",
-      "Leads discovery workshops focused on customer problems rather than solutions",
-      "Shifts team mindset from 'build what's asked' to 'solve customer problems'"
+      "به طور مداوم به جای هدایت کار تیم، می‌پرسد «چگونه می‌توانم کمک کنم؟».",
+      "در موفقیت‌ها اعتبار را به تیم می‌دهد و شخصاً مسئولیت شکست‌ها را بر عهده می‌گیرد.",
+      "تصمیماتی می‌گیرد که به نفع تیم است حتی اگر شخصاً برایش ناخوشایند باشد (مثلاً، شرکت در جلسات دیروقت برای تیم‌های توزیع‌شده).",
+      "به جای مدیریت تکمیل وظایف، موانع موفقیت تیم را برطرف می‌کند.",
+      "مهارت‌ها و مسیر شغلی اعضای تیم را فعالانه توسعه می‌دهد و از ارتقای آن‌ها خوشحال می‌شود."
     ],
     "proofPoints": [
-      "Team measures customer impact for 100% of delivered features",
-      "Participated in 20+ customer research sessions with actionable insights",
-      "Feature adoption rates increased 40% through better problem understanding",
-      "Product team actively seeks your partnership in discovery work",
-      "Can articulate customer value proposition for all team work"
+      "بازخورد ۳۶۰ درجه نشان می‌دهد که تیم شما را به عنوان یک رهبر حامی می‌بیند (امتیاز ۸.۵ از ۱۰ به بالا).",
+      "اعضای تیم به صورت داوطلبانه از شما راهنمایی می‌خواهند، نه فقط در مواقع ضروری.",
+      "استقلال تیم افزایش می‌یابد: بیش از ۷۰٪ مشکلات را بدون دخالت شما حل می‌کنند.",
+      "هیچ جابجایی در تیم طی ۱۸ ماه (در مقابل میانگین ۱۵-۲۰٪ سازمان).",
+      "اعضای تیم کار با شما را فعالانه به دیگران توصیه می‌کنند."
     ],
-    "resourcesNeeded": { "time": "4-6 hours per week for product activities", "budget": "£1,200-2,000 / $1,400-2,400", "tools": ["User research tools", "Analytics platforms", "Product discovery frameworks"], "support": "Product team partnership, UX research team access" },
-    "realStoryExample": { "persona": "Zara, Mid-Level ADM at B2B SaaS", "challenge": "Team building features customers didn't use, 65% feature adoption rate, frustration growing", "action": "Started attending customer calls, facilitated discovery workshops, implemented feature success tracking, challenged requirements", "result": "Feature adoption increased to 92%, customer satisfaction up 28%, team morale improved significantly", "skillsUsed": ["Product Thinking", "Customer Research", "Discovery Facilitation", "Outcome Focus"] },
+    "resourcesNeeded": { "time": "تغییر مداوم ذهنیت و رفتار", "budget": "۱,۲۰۰-۲,۰۰۰ پوند / ۱,۴۰۰-۲,۴۰۰ دلار", "tools": ["پلتفرم بازخورد ۳۶۰ درجه", "منابع کوچینگ"], "support": "کوچ اجرایی یا مربی برای پاسخگویی" },
+    "realStoryExample": { "persona": "جیمز، ADM سطح میانی در یک شرکت نرم‌افزاری", "challenge": "از توسعه‌دهندگی ارتقا یافته بود، با تمایلات «دستور و کنترل» دست و پنجه نرم می‌کرد و تیم بی‌انگیزه بود.", "action": "با یک کوچ روی رهبری خدمتگزار کار کرد، شروع به پرسیدن به جای گفتن کرد و منیت را از تصمیمات حذف کرد.", "result": "امتیاز مشارکت تیم ۴۰٪ افزایش یافت، ایده‌های نوآورانه از تیم سه برابر شد و نرخ ماندگاری به ۹۵٪ بهبود یافت.", "skillsUsed": ["رهبری خدمتگزار", "خودآگاهی", "توانمندسازی تیم"] },
     "commonMistakes": [
-      "Focusing purely on delivery execution without understanding customer value",
-      "Not engaging with customers or user research",
-      "Treating Product as 'the customer' instead of understanding end users",
-      "Measuring outputs (features) instead of outcomes (customer value)",
-      "Not challenging requirements that don't solve customer problems"
+      "ادعای «رهبری خدمتگزار» در حالی که هنوز مدیریت خرد می‌کنید.",
+      "حل همه مشکلات تیم به جای کوچ کردن آن‌ها برای حل مشکلات.",
+      "به نام خود زدن کارهای تیم.",
+      "گرفتن تصمیمات یک‌جانبه بدون نظر تیم.",
+      "تمرکز بر پیشرفت شغلی خود به جای توسعه تیم."
     ],
     "interviewQuestions": [
-      "How do you ensure your team focuses on customer value?",
-      "Describe your experience with product discovery work.",
-      "How do you measure whether delivered features actually help customers?",
-      "Tell me about a time you challenged a requirement based on customer insight."
+      "رهبری خدمتگزار برای شما چه معنایی دارد؟ یک مثال عینی بزنید.",
+      "زمانی را توصیف کنید که تصمیمی گرفتید که به نفع تیم بود اما شخصاً برای شما ناخوشایند بود.",
+      "چگونه بین خدمت به تیم و مسئول نگه داشتن آن‌ها تعادل برقرار می‌کنید؟",
+      "درباره یکی از اعضای تیمی که توسعه دادید و به موفقیت‌های بزرگتری دست یافت، بگویید."
     ]
   },
   {
-    "skillName": "Portfolio & Program Management",
-    "category": "Strategic & Business Acumen",
-    "marketDemand": "45-55% of senior postings",
-    "skillType": "Scale-Up Skill",
-    "requiredForLevel": {
-      "entry": "1/5",
-      "mid": "2/5",
-      "senior": "4/5"
-    },
+    "skillName": "کوچینگ و مربی‌گری",
+    "category": "رهبری و مهارت‌های فردی",
+    "marketDemand": "۷۰-۸۰٪",
+    "skillType": "شایستگی رهبری",
+    "requiredForLevel": { "entry": "۲/۵", "mid": "۴/۵", "senior": "۵/۵" },
     "whatItLooksLike": [
-      "Manages program-level delivery coordinating 5-8 teams with 50-80 people",
-      "Leads program-level PI Planning events in SAFe environments",
-      "Creates portfolio dashboards showing health across 10+ initiatives",
-      "Optimizes portfolio for strategic value and resource allocation",
-      "Manages program budget of $5M+ with cross-team resource coordination"
+      "به جای ارائه راه‌حل، از سؤالات قدرتمند (مانند مدل GROW) برای هدایت افراد به سمت پاسخ‌های خودشان استفاده می‌کند.",
+      "به تیم در مورد اصول چابک به جای فقط اجرای مکانیکی فرآیند، مربیگری می‌کند.",
+      "بازخورد سازنده را به صورت خصوصی و با تمرکز بر رفتار، نه شخصیت، ارائه می‌دهد.",
+      "فرصت‌هایی را برای اعضای تیم شناسایی و ایجاد می‌کند تا مهارت‌های جدیدی را توسعه دهند.",
+      "حداقل دو نفر را به طور فعال مربیگری می‌کند، چه در داخل و چه در خارج از تیم."
     ],
     "proofPoints": [
-      "Successfully managed program with 50+ people and $5M+ budget",
-      "Program predictability measure >75% for 3+ PIs",
-      "Portfolio health dashboard used by leadership for decision-making",
-      "Coordinated dependencies across 8+ teams with 90% on-time delivery",
-      "Optimized portfolio resource allocation showing 25% efficiency gain"
+      "تیم به جای پرسیدن «چه کاری باید انجام دهیم؟»، می‌پرسد «گزینه‌های ما چیست؟».",
+      "اعضای تیم قادر به توضیح «چرا»ی پشت شیوه‌های چابک خود هستند.",
+      "شواهد مستند از رشد مهارت‌های اعضای تیم (به عنوان مثال، از طریق بازخورد ۳۶۰ درجه یا ارتقاء).",
+      "به عنوان یک مربی مورد اعتماد در نظر گرفته می‌شود و افراد از خارج از تیم به دنبال راهنمایی او هستند.",
+      "حل موفقیت‌آمیز یک مشکل تیمی با کوچینگ به جای مداخله مستقیم."
     ],
-    "resourcesNeeded": { "time": "15-25 hours per week for program management", "budget": "£2,000-4,000 / $2,400-4,800", "tools": ["Portfolio management software", "Program dashboards", "Resource planning tools"], "support": "PMO support, Executive sponsorship, Finance partnership" },
-    "realStoryExample": { "persona": "Rachel, Lead ADM at Insurance Company", "challenge": "Digital transformation initiative with 8 teams, unclear priorities, resource conflicts, 6-month delay", "action": "Established program governance, implemented PI Planning, created portfolio prioritization framework, weekly sync across teams", "result": "Program delivered 3 months early, saved $1.2M, became model for other programs, promoted to Director", "skillsUsed": ["Program Management", "Portfolio Optimization", "SAFe RTE", "Stakeholder Alignment"] },
+    "resourcesNeeded": { "time": "۳-۵ ساعت در هفته", "budget": "۱,۵۰۰-۳,۰۰۰ پوند / ۱,۸۰۰-۳,۶۰۰ دلار", "tools": ["چارچوب‌های کوچینگ (GROW، ORID)", "کتاب در مورد کوچینگ"], "support": "کوچ حرفه‌ای برای نظارت و توسعه" },
+    "realStoryExample": { "persona": "فاطمه، ADM ارشد", "challenge": "یک توسعه‌دهنده با استعداد اما کم‌حرف، ایده‌های خود را در جلسات به اشتراک نمی‌گذاشت و ناامید به نظر می‌رسید.", "action": "یک سری جلسات کوچینگ ۱-به-۱ را آغاز کرد، با استفاده از مدل GROW به او کمک کرد تا موانع خود را شناسایی کرده و اعتماد به نفس خود را برای صحبت کردن ایجاد کند.", "result": "توسعه‌دهنده به یکی از مشارکت‌کنندگان اصلی در جلسات طراحی تبدیل شد، یک ابتکار بهبود فرآیند را رهبری کرد و طی یک سال ارتقا یافت.", "skillsUsed": ["کوچینگ", "گوش دادن فعال", "توانمندسازی"] },
     "commonMistakes": [
-      "Managing program like large project instead of coordinated initiatives",
-      "Not establishing clear governance and decision-making frameworks",
-      "Optimizing individual team productivity instead of program outcomes",
-      "Insufficient dependency management across teams",
-      "Not balancing short-term delivery with long-term portfolio health"
+      "اشتباه گرفتن کوچینگ با دستور دادن.",
+      "ارائه مشاوره ناخواسته به جای پرسیدن سؤال.",
+      "کوچینگ فقط در مورد عملکرد ضعیف به جای توسعه نقاط قوت.",
+      "عدم ایجاد یک رابطه امن و قابل اعتماد قبل از شروع کوچینگ.",
+      "حل کردن مشکل برای فرد به جای کمک به او برای پیدا کردن راه‌حل خودش."
     ],
     "interviewQuestions": [
-      "How do you coordinate delivery across multiple teams?",
-      "Describe your approach to portfolio prioritization.",
-      "How do you manage dependencies at program level?",
-      "What's your experience with SAFe program management (if applicable)?"
+      "تفاوت بین کوچینگ و مربی‌گری چیست؟",
+      "چگونه به یکی از اعضای تیم که در حال مبارزه با یک مشکل است، نزدیک می‌شوید؟",
+      "یک سؤال قدرتمند که اغلب در کوچینگ استفاده می‌کنید، چیست؟",
+      "زمانی را توصیف کنید که کوچینگ شما تأثیر مثبتی بر رشد شغلی فردی داشته است."
     ]
   },
   {
-    "skillName": "Organizational Design & Capability Building",
-    "category": "Strategic & Business Acumen",
-    "marketDemand": "30-40% of lead postings",
-    "skillType": "Transformational Leadership",
-    "requiredForLevel": {
-      "entry": "0/5",
-      "mid": "1/5",
-      "senior": "3/5"
-    },
+    "skillName": "حل تعارضات",
+    "category": "رهبری و مهارت‌های فردی",
+    "marketDemand": "۸۰-۹۰٪",
+    "skillType": "مهارت ضروری",
+    "requiredForLevel": { "entry": "۳/۵", "mid": "۴/۵", "senior": "۵/۵" },
     "whatItLooksLike": [
-      "Designs organizational delivery operating model reducing handoffs by 40%",
-      "Builds ADM capability by hiring, training, and developing 5+ delivery managers",
-      "Creates organizational agile maturity assessments with improvement roadmaps",
-      "Leads organizational restructuring from project-based to product-based teams",
-      "Presents organizational design recommendations to C-suite with implementation plan"
+      "بین تعارض سازنده (بحث در مورد ایده‌ها) و تعارض مخرب (حملات شخصی) تمایز قائل می‌شود.",
+      "زمانی که تعارض از حالت سازنده خارج می‌شود، مداخله می‌کند.",
+      "به عنوان یک میانجی بی‌طرف برای کمک به طرفین برای یافتن نقاط مشترک عمل می‌کند.",
+      "به تیم تکنیک‌هایی را برای مخالفت محترمانه آموزش می‌دهد.",
+      "به جای اجتناب از تعارض، به آن به عنوان فرصتی برای رشد و شفاف‌سازی نگاه می‌کند."
     ],
     "proofPoints": [
-      "Led organizational restructuring affecting 100+ people with measurable improvement",
-      "Built delivery capability from 2 to 8 ADMs with 90%+ retention",
-      "Organizational agile maturity improved from Level 2 to Level 4 over 18 months",
-      "Reduced cross-team dependencies by 50% through organizational design",
-      "Published organizational design case study or presented at conference"
+      "تیم می‌تواند بدون مداخله شما، بحث‌های داغ اما محترمانه‌ای در مورد ایده‌ها داشته باشد.",
+      "بازخورد ۳۶۰ درجه نشان می‌دهد که شما در مدیریت موقعیت‌های دشوار منصف و مؤثر هستید.",
+      "حل موفقیت‌آمیز یک تعارض بین فردی که بر عملکرد تیم تأثیر گذاشته بود.",
+      "کاهش جلسات «بعد از جلسه» که در آن تعارضات واقعی رخ می‌دهد.",
+      "ایجاد یک محیط امن که در آن اعضای تیم از به چالش کشیدن یکدیگر نمی‌ترسند."
     ],
-    "resourcesNeeded": { "time": "20-30 hours per week during active transformation", "budget": "£3,000-6,000 personal development / $3,600-7,200, plus organizational investment", "tools": ["Organizational design frameworks", "Maturity assessment tools"], "support": "Executive sponsorship, Organizational development consultant, HR partnership" },
-    "realStoryExample": { "persona": "David, Head of Delivery at Tech Company", "challenge": "250-person engineering org structured as projects with 15 project managers, high turnover, slow delivery", "action": "Redesigned to product-based teams using Team Topologies, built ADM capability, eliminated PM role, 12-month transformation", "result": "Delivery speed increased 60%, turnover reduced from 25% to 12%, became VP of Engineering", "skillsUsed": ["Organizational Design", "Capability Building", "Change Management", "Strategic Leadership"] },
+    "resourcesNeeded": { "time": "مستمر، بر اساس نیاز", "budget": "۵۰۰-۱,۵۰۰ پوند / ۶۰۰-۱,۸۰۰ دلار", "tools": ["مدل‌های تعارض (توماس-کیلمن)", "چارچوب‌های ارتباط غیرخشونت‌آمیز"], "support": "شریک منابع انسانی برای موقعیت‌های پیچیده" },
+    "realStoryExample": { "persona": "لی، ADM سطح میانی", "challenge": "دو توسعه‌دهنده ارشد در مورد رویکردهای معماری با هم اختلاف نظر داشتند که منجر به تنش، سکوت و دو دستگی در تیم شده بود.", "action": "یک جلسه میانجی‌گری را با استفاده از یک چارچوب ۴ مرحله‌ای تسهیل کرد: ۱) ایجاد فضا، ۲) درک دیدگاه‌ها، ۳) یافتن نقاط مشترک، ۴) بررسی راه‌حل‌ها.", "result": "آنها یک راه‌حل ترکیبی پیدا کردند که از بهترین ایده‌های هر دو استفاده می‌کرد. رابطه کاری آنها بهبود یافت و تیم متحدتر شد.", "skillsUsed": ["حل تعارضات", "میانجی‌گری", "تسهیلگری", "ارتباط غیرخشونت‌آمیز"] },
     "commonMistakes": [
-      "Copying organizational structures without understanding context",
-      "Not considering Conway's Law when designing teams",
-      "Reorganizing without clear problem definition and success criteria",
-      "Moving too fast without building capability first",
-      "Not measuring organizational design effectiveness"
+      "نادیده گرفتن تعارض به امید اینکه خود به خود حل شود.",
+      "طرفداری کردن در یک اختلاف.",
+      "تمرکز بر اینکه چه کسی «حق» دارد به جای اینکه چه چیزی «درست» است.",
+      "استفاده از اختیار برای پایان دادن به بحث به جای تسهیل درک.",
+      "اجازه دادن به اینکه تعارض شخصی شود."
     ],
     "interviewQuestions": [
-      "How would you design an organizational structure for optimal delivery?",
-      "Describe your experience building delivery capability.",
-      "How do you assess organizational agile maturity?",
-      "What principles guide your organizational design decisions?"
+      "چگونه بین تعارض سالم و ناسالم تمایز قائل می‌شوید؟",
+      "زمانی را توصیف کنید که یک تعارض را در تیم خود حل کردید. رویکرد شما چه بود؟",
+      "چگونه با عضوی از تیم که به طور مداوم مخرب است، برخورد می‌کنید؟",
+      "پنج سبک مدیریت تعارض توماس-کیلمن چیست؟"
+    ]
+  },
+  // --- ارتباطات و مدیریت ذی‌نفعان ---
+  {
+    "skillName": "برقراری ارتباط عالی (کلامی و نوشتاری)",
+    "category": "ارتباطات و مدیریت ذی‌نفعان",
+    "marketDemand": "۹۸-۱۰۰٪",
+    "skillType": "حیاتی‌ترین مهارت",
+    "requiredForLevel": { "entry": "۳/۵", "mid": "۴/۵", "senior": "۵/۵" },
+    "whatItLooksLike": [
+      "گزارش‌های فصلی تحویل را در ۱۰ دقیقه با داستانی واضح و قانع‌کننده به مدیران ارشد ارائه می‌دهد.",
+      "مفاهیم فنی پیچیده را برای ذی‌نفعان تجاری بدون از دست دادن دقت، ترجمه می‌کند.",
+      "گزارش‌های وضعیت مختصری می‌نویسد که مدیران اجرایی واقعاً آن‌ها را می‌خوانند (بدون نیاز به سؤالات بعدی).",
+      "سبک ارتباطی خود را به طور یکپارچه تطبیق می‌دهد: فنی با مهندسان، استراتژیک با مدیران اجرایی، تاکتیکی با همکاران.",
+      "کارگاه‌هایی با بیش از ۳۰ نفر از زمینه‌های مختلف را با حفظ مشارکت و وضوح، تسهیلگری می‌کند."
+    ],
+    "proofPoints": [
+      "بازخورد ارائه‌ها به طور مداوم ۹ از ۱۰ به بالا از مخاطبان مختلف است.",
+      "ذی‌نفعان اجرایی به طور خاص شما را برای ارائه گزارش‌ها درخواست می‌کنند.",
+      "هیچ پیگیری برای «نیاز به شفاف‌سازی» در ارتباطات نوشتاری برای ۳ ماه وجود نداشته است.",
+      "با موفقیت از طریق یک ارائه قانع‌کننده، بر یک تصمیم مهم تأثیر گذاشته است.",
+      "تیم و ذی‌نفعان، ارتباطات را به عنوان نقطه قوت اصلی در بازخورد ۳۶۰ درجه ارزیابی می‌کنند."
+    ],
+    "resourcesNeeded": { "time": "۵-۷ ساعت در هفته برای فعالیت‌های بهبود", "budget": "۱,۰۰۰-۲,۵۰۰ پوند / ۱,۲۰۰-۳,۰۰۰ دلار", "tools": ["نرم‌افزار ارائه", "دستگاه ضبط", "چارچوب‌های ارتباطی"], "support": "کوچ سخنرانی یا مربی برای بازخورد" },
+    "realStoryExample": { "persona": "آیشا، ADM سطح میانی در یک شرکت مشاوره", "challenge": "در تحویل عالی بود اما ارائه‌هایش پراکنده بود، مدیران اجرایی گیج می‌شدند و دو بار به دلیل «شکاف‌های ارتباطی» ارتقا نگرفت.", "action": "یک کوچ ارائه استخدام کرد، به Toastmasters پیوست، اصل هرم را تمرین کرد و تمام ارائه‌هایش را برای بازبینی خود ضبط کرد.", "result": "مهارت‌های ارائه‌اش متحول شد، برای ارائه در جلسات هیئت مدیره مشتریان دعوت شد و طی ۱۲ ماه به سطح ارشد ارتقا یافت.", "skillsUsed": ["ارتباطات عالی", "خودسازی", "حضور اجرایی"] },
+    "commonMistakes": [
+      "استفاده از اصطلاحات تخصصی با مخاطبان غیرفنی.",
+      "ارائه جزئیات زیاد به جای خلاصه اجرایی در ابتدا.",
+      "خواندن از روی اسلایدها به جای درگیر کردن مخاطب.",
+      "عدم تطبیق سبک ارتباطی با مخاطب.",
+      "عدم بیان نتیجه‌گیری در ابتدا."
+    ],
+    "interviewQuestions": [
+      "چگونه مسائل فنی را به ذی‌نفعان غیرفنی منتقل می‌کنید؟",
+      "زمانی را توصیف کنید که مجبور بودید بدون داشتن اختیار رسمی، از طریق ارتباطات تأثیر بگذارید.",
+      "یک معرفی کوتاه از ارزش مدیریت تحویل چابک ارائه دهید.",
+      "چگونه ارتباطات خود را برای مخاطبان مختلف تنظیم می‌کنید؟"
     ]
   },
   {
-    "skillName": "Retrospective Facilitation & Action",
-    "category": "Continuous Improvement & Innovation",
-    "marketDemand": "75-85%",
-    "skillType": "Core Agile Practice",
-    "requiredForLevel": {
-      "entry": "4/5",
-      "mid": "5/5",
-      "senior": "5/5"
-    },
+    "skillName": "مدیریت ذی‌نفعان و تأثیرگذاری",
+    "category": "ارتباطات و مدیریت ذی‌نفعان",
+    "marketDemand": "۸۰-۹۰٪ (برای نقش‌های میانی به بالا)",
+    "skillType": "شایستگی رهبری",
+    "requiredForLevel": { "entry": "۲/۵", "mid": "۴/۵", "senior": "۵/۵" },
     "whatItLooksLike": [
-      "Facilitates retrospectives using 20+ different formats based on team needs and context",
-      "Achieves 90%+ action item completion rate from retrospectives",
-      "Demonstrates 30% improvement in team-selected metrics over 6 months from retro actions",
-      "Facilitates scaled retrospectives (PI System Demo, Inspect & Adapt) for 50+ people",
-      "Creates retrospective libraries and trains other facilitators on effective techniques"
+      "یک نقشه ذی‌نفعان ایجاد می‌کند که تأثیر و علاقه هر گروه را مشخص می‌کند.",
+      "یک برنامه ارتباطی را برای به‌روز نگه داشتن و مشارکت ذی‌نفعان طراحی و اجرا می‌کند.",
+      "مذاکرات دشوار را با ذی‌نفعان در مورد دامنه، زمان‌بندی یا بودجه مدیریت می‌کند.",
+      "بدون داشتن اختیار رسمی، بر همتایان و رهبری تأثیر می‌گذارد.",
+      "انتظارات ذی‌نفعان را به طور فعال مدیریت می‌کند و از غافلگیری جلوگیری می‌کند."
     ],
     "proofPoints": [
-      "90%+ of retrospective action items completed before next retro",
-      "Team rates retrospective effectiveness 9/10+",
-      "Documented improvements: cycle time down 25%, defects down 40%, team happiness up 30%",
-      "Facilitated 50+ retrospectives using diverse formats",
-      "Other teams request your facilitation for important retrospectives"
+      "امتیاز رضایت ذی‌نفعان ۸ از ۱۰ یا بالاتر است.",
+      "شواهد تأثیرگذاری بر یک تصمیم کلیدی که در ابتدا با آن مخالف بودید.",
+      "ذی‌نفعان به طور فعال به دنبال مشاوره و به‌روزرسانی از شما هستند.",
+      "با موفقیت یک وضعیت تشدید شده با یک ذی‌نفع ناراضی را مدیریت کرده است.",
+      "برنامه ارتباطی شما توسط دیگران در سازمان به عنوان یک الگوی خوب پذیرفته شده است."
     ],
-    "resourcesNeeded": { "time": "2-3 hours per retrospective (prep + facilitation + follow-up)", "budget": "£200-600 / $250-750", "tools": ["Miro/Mural for virtual retrospectives", "Action tracking system", "Facilitation materials"], "support": "Team commitment to retrospective process" },
-    "realStoryExample": { "persona": "Maya, Mid-Level ADM at Digital Agency", "challenge": "Retrospectives became complaint sessions with no action, team cynical about 'waste of time'", "action": "Redesigned retrospective: focus on data not opinions, 3 max action items, public tracking, celebration of wins", "result": "Action completion rate increased from 30% to 95%, team engagement improved, measurable performance gains", "skillsUsed": ["Retrospective Facilitation", "Action Management", "Team Engagement", "Data-Driven Improvement"] },
+    "resourcesNeeded": { "time": "۴-۶ ساعت در هفته", "budget": "۵۰۰-۱,۲۰۰ پوند / ۶۰۰-۱,۴۰۰ دلار", "tools": ["ماتریس تحلیل ذی‌نفعان", "الگوهای برنامه ارتباطی"], "support": "مربی یا حامی اجرایی برای راهنمایی" },
+    "realStoryExample": { "persona": "بن، ADM ارشد", "challenge": "یک ذی‌نفع قدرتمند و بدبین به طور مداوم پیشرفت تیم را تضعیف می‌کرد و خواستار گزارش‌های بی‌پایان بود.", "action": "بن جلسات منظم ۱-به-۱ را برای درک نگرانی‌های او برنامه‌ریزی کرد، یک داشبورد سفارشی برای ارائه شفافیت ایجاد کرد و او را به یک حامی تبدیل کرد.", "result": "ذی‌نفع به بزرگترین قهرمان تیم تبدیل شد، موانع سازمانی را برطرف کرد و بودجه اضافی را تأمین کرد.", "skillsUsed": ["مدیریت ذی‌نفعان", "همدلی", "تأثیرگذاری", "ارتباطات استراتژیک"] },
     "commonMistakes": [
-      "Using same retrospective format every time (team disengagement)",
-      "Not tracking or following up on action items",
-      "Allowing retrospectives to become blame sessions",
-      "Too many action items (3 max is optimal)",
-      "Not celebrating improvements and wins"
+      "رفتار یکسان با همه ذی‌نفعان.",
+      "ارتباط برقرار کردن تنها زمانی که مشکلی وجود دارد.",
+      "فرض اینکه ذی‌نفعان زمینه کار تیم را درک می‌کنند.",
+      "اجتناب از گفتگوهای دشوار با ذی‌نفعان.",
+      "قول دادن بیش از حد و عمل نکردن به آن."
     ],
     "interviewQuestions": [
-      "How do you ensure retrospectives lead to actual improvements?",
-      "What do you do when retrospectives become repetitive or stale?",
-      "Describe your most effective retrospective. What made it work?",
-      "How do you handle blame or negativity in retrospectives?"
+      "چگونه ذی‌نفعان کلیدی یک پروژه را شناسایی و اولویت‌بندی می‌کنید؟",
+      "زمانی را توصیف کنید که مجبور بودید به یک ذی‌نفع قدرتمند «نه» بگویید.",
+      "چگونه با ذی‌نفعی که با رویکرد چابک موافق نیست، برخورد می‌کنید؟",
+      "چگونه انتظارات ذی‌نفعان متعدد با اولویت‌های متناقض را مدیریت می‌کنید؟"
+    ]
+  },
+  // --- معیارها، تحلیل و تصمیم‌گیری مبتنی بر داده ---
+  {
+    "skillName": "معیارهای سنتی چابک (شتاب، نمودار سوختن)",
+    "category": "معیارها، تحلیل و تصمیم‌گیری مبتنی بر داده",
+    "marketDemand": "۸۰-۸۵٪",
+    "skillType": "شایستگی پایه",
+    "requiredForLevel": { "entry": "۴/۵", "mid": "۴/۵", "senior": "۴/۵" },
+    "whatItLooksLike": [
+      "دستیابی به شتاب (Velocity) پایدار و قابل پیش‌بینی در محدوده ۱۵٪± طی بیش از ۶ اسپرینت.",
+      "استفاده از شتاب تاریخی برای پیش‌بینی تاریخ‌های انتشار با دقت ۹۰٪.",
+      "ایجاد نمودارهای سوختن (Burn-down charts) که گفتگوهای روزانه تیم را در مورد پیشرفت هدایت می‌کند.",
+      "آموزش ذی‌نفعان در مورد تفسیر مناسب شتاب (نه به عنوان یک معیار بهره‌وری).",
+      "شناسایی زودهنگام مشکلات سلامت تیم از طریق روندها و الگوهای شتاب."
+    ],
+    "proofPoints": [
+      "شتاب تیم برای بیش از ۶ اسپرینت در محدوده ۱۵٪± پایدار است.",
+      "پیش‌بینی‌های مبتنی بر شتاب با دقت ۱۰٪± صحیح هستند.",
+      "ذی‌نفعان درک می‌کنند که شتاب مختص تیم است و بین تیم‌ها قابل مقایسه نیست.",
+      "هیچ دستکاری در معیارهای شتاب وجود ندارد (تخمین صادقانه حفظ می‌شود).",
+      "قادر به توضیح روندهای شتاب و نشانه‌های آن‌ها در مورد سلامت تیم است."
+    ],
+    "resourcesNeeded": { "time": "۲-۳ ساعت در هفته برای پیگیری و تحلیل معیارها", "budget": "حداقل (۰-۲۰۰ پوند / ۰-۲۵۰ دلار برای ابزارها)", "tools": ["جیرا یا ابزار مشابه با پیگیری شتاب", "داشبوردهای گزارش‌گیری"], "support": "همکاری تیم برای تخمین صادقانه" },
+    "realStoryExample": { "persona": "هانا، ADM تازه‌کار در فناوری سلامت", "challenge": "ذی‌نفعان از تیم می‌خواستند «شتاب را ۵۰٪ افزایش دهد» و معیارها را به درستی درک نمی‌کردند.", "action": "ذی‌نفعان را در مورد هدف شتاب آموزش داد، نشان داد که شتاب پایدار برابر با تیم سالم است و از پیش‌بینی برای تنظیم انتظارات واقع‌بینانه استفاده کرد.", "result": "فشار برداشته شد، روحیه تیم بهبود یافت و تمرکز از دستکاری شتاب به تحویل ارزش تغییر کرد.", "skillsUsed": ["درک معیارها", "آموزش ذی‌نفعان", "حمایت از تیم"] },
+    "commonMistakes": [
+      "مقایسه شتاب بین تیم‌های مختلف.",
+      "استفاده از شتاب به عنوان معیار بهره‌وری برای افراد.",
+      "فشار آوردن به تیم برای «افزایش شتاب» که باعث دستکاری می‌شود.",
+      "عدم رسیدگی به دلایل ناپایداری شتاب.",
+      "پیش‌بینی با داده‌های تاریخی ناکافی (کمتر از ۳ اسپرینت)."
+    ],
+    "interviewQuestions": [
+      "چگونه شتاب را محاسبه و استفاده می‌کنید؟",
+      "چه چیزی باعث نوسان شتاب می‌شود و چگونه با آن برخورد می‌کنید؟",
+      "چگونه از دستکاری شتاب جلوگیری می‌کنید؟",
+      "توضیح دهید چگونه با استفاده از شتاب، تاریخ انتشار را پیش‌بینی می‌کنید."
     ]
   },
   {
-    "skillName": "Process Optimization & Efficiency",
-    "category": "Continuous Improvement & Innovation",
-    "marketDemand": "60-75%",
-    "skillType": "Value Creation Engine",
-    "requiredForLevel": {
-      "entry": "3/5",
-      "mid": "4/5",
-      "senior": "5/5"
-    },
+    "skillName": "معیارهای جریان (زمان چرخه، کارایی جریان)",
+    "category": "معیارها، تحلیل و تصمیم‌گیری مبتنی بر داده",
+    "marketDemand": "۵۰-۶۰٪ (در حال افزایش)",
+    "skillType": "متمایزکننده",
+    "requiredForLevel": { "entry": "۱/۵", "mid": "۳/۵", "senior": "۴/۵" },
     "whatItLooksLike": [
-      "Reduces delivery cycle time by 40% through systematic process optimization",
-      "Eliminates 30% of non-value-added activities through Lean analysis",
-      "Implements automation reducing manual work from 20 hours to 2 hours per week",
-      "Documents process improvements with before/after metrics and ROI calculation",
-      "Redesigns end-to-end delivery process improving efficiency by 50%+"
+      "به طور مداوم زمان چرخه (Cycle Time) را پیگیری و تحلیل می‌کند تا قابلیت پیش‌بینی را بهبود بخشد.",
+      "از نمودار توزیع زمان چرخه برای ایجاد توافق‌نامه‌های سطح خدمات (SLA) مبتنی بر داده استفاده می‌کند.",
+      "کارایی جریان (Flow Efficiency) را برای شناسایی و حذف زمان‌های انتظار در فرآیند، محاسبه و بهبود می‌بخشد.",
+      "از نمودار جریان تجمعی (CFD) برای مدیریت کار در حال انجام (WIP) و شناسایی گلوگاه‌ها استفاده می‌کند.",
+      "تیم را از معیارهای سرعت به معیارهای جریان برای تمرکز بر قابلیت پیش‌بینی و کارایی، منتقل می‌کند."
     ],
     "proofPoints": [
-      "Cycle time reduced by 35%+ through process optimization",
-      "Eliminated $50K+ annual waste through efficiency improvements",
-      "Documented 5+ process improvements with measurable business impact",
-      "Process efficiency scores improved from 20% to 45%",
-      "Recognition for operational excellence (award, commendation, bonus)"
+      "میانگین زمان چرخه طی ۳ ماه ۲۵٪ کاهش یافته است.",
+      "کارایی جریان از کمتر از ۱۵٪ به بیش از ۳۰٪ افزایش یافته است.",
+      "تیم می‌تواند با اطمینان ۸۵٪ بگوید که یک آیتم کاری در X روز یا کمتر تکمیل خواهد شد.",
+      "هیچ آیتمی در نمودار CFD برای بیش از یک دوره مشخص «پیر» نمی‌شود.",
+      "تیم به طور فعال از معیارهای جریان در جلسات مرور برای شناسایی فرصت‌های بهبود استفاده می‌کند."
     ],
-    "resourcesNeeded": { "time": "6-10 hours per week for improvement initiatives", "budget": "£1,500-4,000 / $1,800-4,800", "tools": ["Process mapping software", "Lean Six Sigma tools", "Automation platforms"], "support": "Management support for process changes, cross-functional collaboration" },
-    "realStoryExample": { "persona": "Chen, Senior ADM at Manufacturing Tech", "challenge": "Release process taking 12 hours with 15 manual steps, releases only monthly due to complexity", "action": "Mapped current process, identified automation opportunities, eliminated 10 manual steps, implemented CI/CD pipeline", "result": "Release time reduced to 45 minutes, frequency increased to weekly, deployment errors down 80%, $200K annual savings", "skillsUsed": ["Process Optimization", "Lean Thinking", "Automation", "DevOps Practices"] },
+    "resourcesNeeded": { "time": "۲-۴ ساعت در هفته", "budget": "۵۰۰-۱,۰۰۰ پوند / ۶۰۰-۱,۲۰۰ دلار", "tools": ["ActionableAgile Analytics for Jira", "داشبوردهای سفارشی"], "support": "کوچ کانبان یا متخصص معیارهای ناب" },
+    "realStoryExample": { "persona": "ریکاردو، ADM در یک شرکت SaaS", "challenge": "تیم به طور مداوم به اهداف اسپرینت خود نمی‌رسید، اما شتاب آنها «خوب» به نظر می‌رسید. تیم احساس می‌کرد که سخت کار می‌کند اما پیشرفتی ندارد.", "action": "معیارهای جریان را معرفی کرد و کشف کرد که کارایی جریان آنها تنها ۱۰٪ بود، به این معنی که ۹۰٪ زمان، کارها در صف انتظار بودند. آنها محدودیت‌های WIP را کاهش دادند و روی رفع موانع تمرکز کردند.", "result": "زمان چرخه ۵۰٪ کاهش یافت، قابلیت پیش‌بینی به شدت بهبود یافت و استرس تیم کم شد، حتی با وجود اینکه «شتاب» آنها کمی کاهش یافت.", "skillsUsed": ["معیارهای جریان", "تفکر سیستمی", "کانبان", "تحلیل داده"] },
     "commonMistakes": [
-      "Optimizing locally instead of end-to-end system",
-      "Not measuring baseline before optimization",
-      "Implementing solutions without understanding root cause",
-      "Optimizing processes without involving people who do the work",
-      "Not sustaining improvements (process degradation over time)"
+      "پیگیری معیارهای جریان بدون ایجاد تغییرات در فرآیند.",
+      "عدم درک تفاوت بین زمان پیشبرد و زمان چرخه.",
+      "تنظیم محدودیت‌های WIP بدون استفاده از داده‌های جریان برای تأیید اثربخشی آنها.",
+      "نادیده گرفتن «کار پنهان» که بر معیارهای جریان تأثیر می‌گذارد.",
+      "استفاده از معیارها برای سرزنش تیم به جای بهبود سیستم."
     ],
     "interviewQuestions": [
-      "Describe a process you optimized. What was your approach?",
-      "How do you identify waste in delivery processes?",
-      "What Lean or Six Sigma tools do you use?",
-      "How do you ensure process improvements are sustained?"
+      "تفاوت بین زمان چرخه و زمان پیشبرد چیست و چرا هر دو مهم هستند؟",
+      "چگونه از نمودار جریان تجمعی برای مدیریت سلامت سیستم خود استفاده می‌کنید؟",
+      "کارایی جریان چیست و چگونه آن را بهبود می‌بخشید؟",
+      "اگر مجبور باشید فقط یک معیار را برای یک تیم کانبان انتخاب کنید، کدام را انتخاب می‌کنید و چرا؟"
+    ]
+  },
+  // --- بینش استراتژیک و تجاری ---
+  {
+    "skillName": "همسویی و برنامه‌ریزی استراتژیک",
+    "category": "بینش استراتژیک و تجاری",
+    "marketDemand": "۵۰-۶۰٪ از آگهی‌های ارشد",
+    "skillType": "شایستگی رهبری",
+    "requiredForLevel": { "entry": "۱/۵", "mid": "۲/۵", "senior": "۴/۵" },
+    "whatItLooksLike": [
+      "استراتژی شرکت را به نقشه‌های راه فصلی تیم ترجمه می‌کند که همسویی واضحی با OKRها را نشان می‌دهد.",
+      "برنامه‌های تحویل استراتژیک ایجاد می‌کند که به رهبری اجرایی ارائه می‌شود.",
+      "در برنامه‌ریزی استراتژیک سالانه شرکت کرده و بر جهت‌گیری سازمانی تأثیر می‌گذارد.",
+      "اطمینان حاصل می‌کند که بیش از ۹۰٪ کار تیم مستقیماً از اهداف استراتژیک شرکت پشتیبانی می‌کند.",
+      "فرصت‌های استراتژیکی را شناسایی می‌کند که در آن قابلیت‌های تحویل، رشد کسب‌وکار را ممکن می‌سازد."
+    ],
+    "proofPoints": [
+      "نقشه راه تیم به طور صریح با OKRهای شرکت با دلایل واضح گره خورده است.",
+      "برای شرکت در جلسات برنامه‌ریزی استراتژیک دعوت می‌شود.",
+      "رهبری در تصمیم‌گیری‌های خود به بینش‌های استراتژیک شما ارجاع می‌دهد.",
+      "هیچ کاری در تیم وجود ندارد که به اهداف استراتژیک متصل نباشد.",
+      "با موفقیت بر اساس بینش‌های تحویل، بر جهت‌گیری استراتژیک تأثیر گذاشته است."
+    ],
+    "resourcesNeeded": { "time": "۴-۶ ساعت در هفته برای کار استراتژیک", "budget": "۷۰۰-۲,۰۰۰ پوند / ۸۰۰-۲,۴۰۰ دلار", "tools": ["نرم‌افزار OKR", "ابزارهای نقشه‌برداری استراتژی", "ابزارهای برنامه‌ریزی پورتفولیو"], "support": "حامی اجرایی, دسترسی به تیم استراتژی" },
+    "realStoryExample": { "persona": "مایکل، ADM راهبر در فناوری مالی", "challenge": "تیم روی پروژه‌هایی کار می‌کرد که با جهت‌گیری شرکت همسو نبودند و خطر قطع بودجه وجود داشت.", "action": "بک‌لاگ تیم را با استراتژی شرکت دوباره همسو کرد، ۳۰٪ از کارهای غیراستراتژیک را حذف کرد و یک داشبورد استراتژی ایجاد کرد.", "result": "تیم به یک اولویت استراتژیک تبدیل شد، بودجه ۵۰٪ افزایش یافت و مایکل به سمت مدیر ارتقا یافت.", "skillsUsed": ["همسویی استراتژیک", "مدیریت پورتفولیو", "مدیریت ذی‌نفعان", "ارتباطات"] },
+    "commonMistakes": [
+      "عدم درک استراتژی و جهت‌گیری شرکت.",
+      "کار بر روی پروژه‌های «جالب» که با اهداف تجاری همسو نیستند.",
+      "عدم انتقال اینکه چگونه کار تحویل از استراتژی پشتیبانی می‌کند.",
+      "منتظر ماندن برای اینکه به شما بگویند چه چیزی استراتژیک است به جای جستجوی همسویی.",
+      "زیر سؤال نبردن کارهایی که به استراتژی متصل نیستند."
+    ],
+    "interviewQuestions": [
+      "چگونه اطمینان حاصل می‌کنید که کار تیم شما با استراتژی شرکت همسو است؟",
+      "زمانی را توصیف کنید که بر جهت‌گیری استراتژیک تأثیر گذاشتید.",
+      "چگونه استراتژی کسب‌وکار را به برنامه‌های تحویل ترجمه می‌کنید؟",
+      "از چه چارچوب‌هایی برای برنامه‌ریزی استراتژیک استفاده می‌کنید؟"
     ]
   },
   {
-    "skillName": "Innovation & Experimentation",
-    "category": "Continuous Improvement & Innovation",
-    "marketDemand": "50-60%",
-    "skillType": "Cultural Driver",
-    "requiredForLevel": {
-      "entry": "2/5",
-      "mid": "3/5",
-      "senior": "4/5"
-    },
+    "skillName": "تفکر محصول و کشف",
+    "category": "بینش استراتژیک و تجاری",
+    "marketDemand": "۶۰-۷۰٪",
+    "skillType": "بسیار ارزشمند",
+    "requiredForLevel": { "entry": "۱/۵", "mid": "۳/۵", "senior": "۴/۵" },
     "whatItLooksLike": [
-      "Implements '20% time' or innovation sprints for teams resulting in 3+ adopted innovations",
-      "Conducts 'spike' stories to evaluate new technologies before commitment",
-      "Creates blameless post-mortem culture where failures become learning opportunities",
-      "Tracks innovation metrics: experiments run (15+/year), success rate (30-40%), learnings captured",
-      "Builds experimentation culture where team proactively suggests and tests new approaches"
+      "با مدیر محصول برای تسهیلگری جلسات کشف محصول (product discovery) همکاری می‌کند.",
+      "به تیم کمک می‌کند تا بین «ساختن چیز درست» و «ساختن درست چیز» تمایز قائل شود.",
+      "از تکنیک‌هایی مانند نقشه‌برداری داستان کاربر و نمونه‌سازی سریع برای اعتبارسنجی ایده‌ها قبل از ساخت، حمایت می‌کند.",
+      "اطمینان حاصل می‌کند که تیم به طور منظم با کاربران نهایی در تعامل است.",
+      "نتایج تجربیات را بر اساس یادگیری، نه فقط تکمیل، اندازه‌گیری می‌کند."
     ],
     "proofPoints": [
-      "15+ experiments conducted annually with documented learnings",
-      "3+ innovations adopted from experimentation providing measurable value",
-      "Team proactively proposes 80% of experiment ideas (not ADM-driven)",
-      "Zero fear of failure - team openly discusses failed experiments",
-      "Innovation metrics tracked and improving over time"
+      "کاهش دوباره‌کاری به دلیل نیازمندی‌های نامشخص به میزان ۳۰٪.",
+      "حداقل ۲۰٪ از ایده‌ها قبل از ورود به بک‌لاگ توسعه، از طریق کشف، نامعتبر می‌شوند.",
+      "تیم می‌تواند توضیح دهد که کدام مشکل کاربر را برای کدام پرسونا حل می‌کند.",
+      "شواهد چرخه‌های بازخورد سریع با کاربران که بر جهت محصول تأثیر می‌گذارد.",
+      "مشارکت موفق با مدیر محصول برای تعریف MVP که هم ارزشمند و هم قابل اجرا باشد."
     ],
-    "resourcesNeeded": { "time": "20% team capacity for innovation time, plus 2-3 hours ADM facilitation weekly", "budget": "£1,000-3,000 annually / $1,200-3,600", "tools": ["Experimentation tracking system", "Showcase/demo platforms"], "support": "Leadership support for experimentation time and budget" },
-    "realStoryExample": { "persona": "Liam, Mid-Level ADM at FinTech Startup", "challenge": "Team stuck in 'safe' delivery mode, no innovation, falling behind competitors", "action": "Introduced innovation Fridays (20% time), created experiment canvas, celebrated 'good failures', showcased learnings", "result": "12 experiments in 6 months, 4 adopted innovations, 1 became major product feature generating $500K revenue", "skillsUsed": ["Innovation Leadership", "Experimentation", "Cultural Change", "Risk Management"] },
+    "resourcesNeeded": { "time": "۳-۵ ساعت در هفته", "budget": "۲۰۰-۱,۰۰۰ پوند / ۲۵۰-۱,۲۰۰ دلار", "tools": ["Miro/Mural", "ابزارهای نمونه‌سازی (Figma)", "پلتفرم‌های مصاحبه با کاربر"], "support": "همکاری قوی با مدیریت محصول و UX" },
+    "realStoryExample": { "persona": "چویی، ADM در یک شرکت فناوری آموزشی", "challenge": "تیم ۶ ماه صرف ساخت یک ویژگی بزرگ کرد که در نهایت کاربران کمی از آن استفاده کردند، که منجر به کاهش روحیه و اتلاف منابع شد.", "action": "یک فرآیند کشف دوهفته‌ای را معرفی کرد که شامل مصاحبه با کاربر، نمونه‌سازی کاغذی و تست‌های A/B کوچک برای اعتبارسنجی فرضیات قبل از نوشتن کد بود.", "result": "چرخه توسعه ویژگی از ۶ ماه به ۶ هفته کاهش یافت، مشارکت کاربر در ویژگی‌های جدید ۴۰۰٪ افزایش یافت و تیم احساس مالکیت بیشتری نسبت به محصول کرد.", "skillsUsed": ["کشف محصول", "تفکر ناب استارتاپ", "تسهیلگری", "تست فرضیه"] },
     "commonMistakes": [
-      "Not providing dedicated time for innovation (always de-prioritized)",
-      "Punishing failed experiments",
-      "Not documenting learnings from experiments",
-      "Allowing innovation time without structure or accountability",
-      "Not connecting experiments to business goals"
+      "نگاه کردن به کشف به عنوان مرحله‌ای جداگانه به جای یک فعالیت مداوم.",
+      "اجازه دادن به «تحلیل فلج‌کننده» برای جلوگیری از شروع کار.",
+      "عدم مشارکت کل تیم (به ویژه مهندسان) در فرآیند کشف.",
+      "اشتباه گرفتن لیست خواسته‌های ذی‌نفعان با نیازهای معتبر کاربر.",
+      "اندازه‌گیری موفقیت بر اساس خروجی به جای نتایج یادگیری."
     ],
     "interviewQuestions": [
-      "How do you foster innovation within your teams?",
-      "Describe an experiment your team ran. What did you learn?",
-      "How do you balance innovation with delivery commitments?",
-      "How do you create psychological safety for experimentation?"
+      "نقش یک ADM در کشف محصول چیست؟",
+      "چگونه بین کشف و تحویل در یک اسپرینت تعادل برقرار می‌کنید؟",
+      "یک تکنیک مورد علاقه خود را برای اعتبارسنجی سریع یک ایده توصیف کنید.",
+      "چگونه به تیم کمک می‌کنید تا بر نتایج تمرکز کند، نه فقط بر خروجی؟"
     ]
   },
   {
-    "skillName": "Knowledge Management & Documentation",
-    "category": "Continuous Improvement & Innovation",
-    "marketDemand": "55-65%",
-    "skillType": "Organizational Capability",
-    "requiredForLevel": {
-      "entry": "3/5",
-      "mid": "4/5",
-      "senior": "4/5"
-    },
+    "skillName": "سواد تجاری و مالی",
+    "category": "بینش استراتژیک و تجاری",
+    "marketDemand": "۴۰-۵۰٪ (برای نقش‌های ارشد حیاتی است)",
+    "skillType": "شایستگی رهبری",
+    "requiredForLevel": { "entry": "۱/۵", "mid": "۲/۵", "senior": "۴/۵" },
     "whatItLooksLike": [
-      "Builds comprehensive team documentation in Confluence reducing onboarding time by 40%",
-      "Creates decision logs (ADRs - Architectural Decision Records) for all major decisions",
-      "Implements 'documentation as code' practices for delivery processes",
-      "Facilitates lunch-and-learn sessions and knowledge sharing forums monthly",
-      "Reduces repeated questions by 70% through searchable knowledge base"
+      "می‌تواند مدل کسب‌وکار شرکت و نحوه درآمدزایی آن را توضیح دهد.",
+      "کار تیم را به معیارهای تجاری (مانند درآمد، ریزش مشتری، هزینه جذب مشتری) مرتبط می‌کند.",
+      "در ایجاد موارد تجاری برای ابتکارات جدید مشارکت می‌کند.",
+      "بودجه تیم یا پروژه را با دقت ۹۵٪ مدیریت می‌کند.",
+      "هزینه تأخیر را برای کمک به اولویت‌بندی درک و بیان می‌کند."
     ],
     "proofPoints": [
-      "Onboarding time reduced from 6 weeks to 3.5 weeks through documentation",
-      "80%+ of common questions answered by searchable documentation",
-      "100+ documented decision records available for reference",
-      "Knowledge sharing sessions held monthly with 85%+ attendance",
-      "Team documentation rated 9/10+ for usefulness and accessibility"
+      "با موفقیت برای یک ابتکار جدید بر اساس یک مورد تجاری قانع‌کننده، بودجه دریافت کرده است.",
+      "قادر به توضیح تأثیر مالی تصمیمات فنی به ذی‌نفعان تجاری است.",
+      "به طور منظم در مورد پیشرفت در برابر معیارهای تجاری گزارش می‌دهد، نه فقط معیارهای تحویل.",
+      "پیش‌بینی بودجه شما به طور مداوم دقیق است.",
+      "تیم می‌تواند توضیح دهد که چگونه کارشان بر موفقیت مالی شرکت تأثیر می‌گذارد."
     ],
-    "resourcesNeeded": { "time": "3-5 hours per week for knowledge management activities", "budget": "£500-1,500 / $600-1,800", "tools": ["Confluence or similar wiki", "Documentation tools", "Search functionality"], "support": "Team participation in documentation efforts" },
-    "realStoryExample": { "persona": "Olivia, Mid-Level ADM at Consulting Firm", "challenge": "High turnover meant constant re-learning, tribal knowledge lost, new people taking 3 months to be productive", "action": "Built comprehensive knowledge base, implemented ADRs, established 'doc or it didn't happen' culture, created templates", "result": "Onboarding time reduced 55%, knowledge retention through turnover, became model for other teams", "skillsUsed": ["Knowledge Management", "Documentation", "Process Standardization", "Cultural Change"] },
+    "resourcesNeeded": { "time": "۲-۳ ساعت در هفته", "budget": "۵۰۰-۲,۰۰۰ پوند / ۶۰۰-۲,۴۰۰ دلار", "tools": ["گزارش‌های سالانه شرکت", "داشبوردهای هوش تجاری", "الگوهای مدل‌سازی مالی"], "support": "مربی از بخش مالی یا محصول" },
+    "realStoryExample": { "persona": "سوفیا، ADM راهبر", "challenge": "تیم او به طور مداوم ویژگی‌هایی را تحویل می‌داد، اما رهبری ارزش سرمایه‌گذاری را زیر سؤال می‌برد.", "action": "با بخش مالی همکاری کرد تا تأثیر هر ویژگی را بر حفظ مشتری و درآمد مدل‌سازی کند. شروع به گزارش‌دهی در مورد «بازگشت سرمایه تحویل» به جای فقط «شتاب» کرد.", "result": "درک رهبری از ارزش تیم به شدت افزایش یافت، بودجه تیم برای سال بعد دو برابر شد و سوفیا برای ارائه رویکرد خود در سطح شرکت دعوت شد.", "skillsUsed": ["سواد مالی", "ارتباطات استراتژیک", "تحلیل داده", "قصه‌گویی با داده"] },
     "commonMistakes": [
-      "Documentation becomes outdated and unreliable",
-      "Too much documentation (information overload)",
-      "Not making documentation searchable and accessible",
-      "ADM does all documentation instead of team ownership",
-      "Not integrating documentation into workflow (separate activity)"
+      "نادیده گرفتن جنبه‌های مالی تحویل.",
+      "عدم درک تفاوت بین هزینه و ارزش.",
+      "صحبت کردن فقط در مورد معیارهای فنی با مخاطبان تجاری.",
+      "عدم مشارکت مالی در مراحل اولیه برنامه‌ریزی.",
+      "نگاه کردن به بودجه به عنوان یک مشکل دیگران."
     ],
     "interviewQuestions": [
-      "How do you ensure knowledge is captured and accessible?",
-      "What's your approach to team documentation?",
-      "How do you handle knowledge transfer when people leave?",
-      "Describe your experience with communities of practice or knowledge sharing."
+      "چگونه ارزش یک پروژه را فراتر از تکمیل به موقع و در چارچوب بودجه، اندازه‌گیری می‌کنید؟",
+      "هزینه تأخیر چیست و چگونه بر اولویت‌بندی تأثیر می‌گذارد؟",
+      "زمانی را توصیف کنید که مجبور به گرفتن یک تصمیم مبادله‌ای بر اساس ملاحظات مالی بودید.",
+      "چگونه به یک مهندس کمک می‌کنید تا اهمیت تجاری کار خود را درک کند؟"
+    ]
+  },
+  // --- بهبود مستمر و نوآوری ---
+  {
+    "skillName": "تسهیلگری و پیگیری جلسات مرور",
+    "category": "بهبود مستمر و نوآوری",
+    "marketDemand": "۷۵-۸۵٪",
+    "skillType": "شیوه اصلی چابک",
+    "requiredForLevel": {
+      "entry": "۴/۵",
+      "mid": "۵/۵",
+      "senior": "۵/۵"
+    },
+    "whatItLooksLike": [
+      "با استفاده از بیش از ۲۰ قالب مختلف بر اساس نیاز و زمینه تیم، جلسات مرور را تسهیلگری می‌کند.",
+      "به نرخ تکمیل بیش از ۹۰٪ موارد اقدام از جلسات مرور دست می‌یابد.",
+      "بهبود ۳۰٪ در معیارهای انتخاب شده توسط تیم طی ۶ ماه از طریق اقدامات مرور را نشان می‌دهد.",
+      "جلسات مرور مقیاس‌پذیر (مانند دموی سیستم PI، بازرسی و تطبیق) را برای بیش از ۵۰ نفر تسهیلگری می‌کند.",
+      "کتابخانه‌هایی از قالب‌های مرور ایجاد کرده و تسهیلگران دیگر را در مورد تکنیک‌های مؤثر آموزش می‌دهد."
+    ],
+    "proofPoints": [
+      "بیش از ۹۰٪ موارد اقدام مرور قبل از جلسه بعدی تکمیل می‌شوند.",
+      "تیم، اثربخشی جلسات مرور را ۹ از ۱۰ به بالا ارزیابی می‌کند.",
+      "بهبودهای مستند: زمان چرخه ۲۵٪ کاهش یافته، نقص‌ها ۴۰٪ کاهش یافته، رضایت تیم ۳۰٪ افزایش یافته است.",
+      "تسهیلگری بیش از ۵۰ جلسه مرور با استفاده از قالب‌های متنوع.",
+      "تیم‌های دیگر برای جلسات مرور مهم خود، درخواست تسهیلگری شما را دارند."
+    ],
+    "resourcesNeeded": { "time": "۲-۳ ساعت برای هر جلسه مرور (آماده‌سازی + تسهیلگری + پیگیری)", "budget": "۲۰۰-۶۰۰ پوند / ۲۵۰-۷۵۰ دلار", "tools": ["Miro/Mural برای جلسات مرور مجازی", "سیستم پیگیری اقدام", "مواد تسهیلگری"], "support": "تعهد تیم به فرآیند مرور" },
+    "realStoryExample": { "persona": "مایا، ADM سطح میانی در یک آژانس دیجیتال", "challenge": "جلسات مرور به جلسات شکایت بدون اقدام تبدیل شده بود و تیم نسبت به «اتلاف وقت» بدبین بود.", "action": "طراحی مجدد جلسه مرور: تمرکز بر داده‌ها به جای نظرات، حداکثر ۳ مورد اقدام، پیگیری عمومی، جشن گرفتن پیروزی‌ها.", "result": "نرخ تکمیل اقدام از ۳۰٪ به ۹۵٪ افزایش یافت، مشارکت تیم بهبود یافت و دستاوردهای عملکردی قابل اندازه‌گیری بود.", "skillsUsed": ["تسهیلگری مرور", "مدیریت اقدام", "مشارکت تیم", "بهبود مبتنی بر داده"] },
+    "commonMistakes": [
+      "استفاده از یک قالب مرور یکسان در هر بار (باعث بی‌انگیزگی تیم می‌شود).",
+      "عدم پیگیری یا دنبال کردن موارد اقدام.",
+      "اجازه دادن به اینکه جلسات مرور به جلسات سرزنش تبدیل شوند.",
+      "داشتن موارد اقدام بیش از حد (حداکثر ۳ مورد بهینه است).",
+      "جشن نگرفتن بهبودها و پیروزی‌ها."
+    ],
+    "interviewQuestions": [
+      "چگونه اطمینان حاصل می‌کنید که جلسات مرور منجر به بهبودهای واقعی می‌شوند؟",
+      "وقتی جلسات مرور تکراری یا خسته‌کننده می‌شوند، چه می‌کنید؟",
+      "مؤثرترین جلسه مروری که داشتید را توصیف کنید. چه چیزی باعث موفقیت آن شد؟",
+      "چگونه با سرزنش یا منفی‌بافی در جلسات مرور برخورد می‌کنید؟"
     ]
   },
   {
-    "skillName": "Emerging Technology Adoption (AI/ML)",
-    "category": "Continuous Improvement & Innovation",
-    "marketDemand": "35-45% (RAPIDLY GROWING)",
-    "skillType": "Future-Proofing",
-    "requiredForLevel": {
-      "entry": "1/5",
-      "mid": "2/5",
-      "senior": "3/5"
-    },
+    "skillName": "مدیریت تغییر سازمانی",
+    "category": "بهبود مستمر و نوآوری",
+    "marketDemand": "۴۵-۵۵٪ (برای نقش‌های ارشد)",
+    "skillType": "شایستگی رهبری",
+    "requiredForLevel": { "entry": "۱/۵", "mid": "۳/۵", "senior": "۵/۵" },
     "whatItLooksLike": [
-      "Implements GitHub Copilot or AI coding assistants for team with measured productivity gains",
-      "Uses ChatGPT/Claude for documentation, retrospective summaries, meeting notes with 30% time savings",
-      "Leads pilot projects measuring AI productivity improvements (20-30% code generation speedup)",
-      "Evaluates and adopts platform engineering tools and practices",
-      "Presents technology trend analysis to leadership with adoption recommendations"
+      "از مدل‌های تغییر (مانند ADKAR، Kotter) برای ساختاردهی به ابتکارات تحول چابک استفاده می‌کند.",
+      "یک برنامه ارتباطی برای مدیریت تأثیر تغییر بر ذی‌نفعان ایجاد می‌کند.",
+      "مقاومت در برابر تغییر را شناسایی و به صورت همدلانه به آن رسیدگی می‌کند.",
+      "ائتلافی از قهرمانان تغییر را برای حمایت از پذیرش در سراسر سازمان ایجاد می‌کند.",
+      "موفقیت ابتکارات تغییر را بر اساس پذیرش و تأثیر تجاری اندازه‌گیری می‌کند."
     ],
     "proofPoints": [
-      "Successfully piloted 3+ AI tools with measured business impact",
-      "Team productivity improved 25%+ through AI tool adoption",
-      "Published internal guidelines for responsible AI use in delivery",
-      "Presented AI adoption recommendations to leadership resulting in investment",
-      "Recognized as AI early adopter and internal expert"
+      "رهبری موفقیت‌آمیز یک ابتکار تغییر فرآیند که توسط بیش از ۳ تیم پذیرفته شده است.",
+      "کاهش قابل اندازه‌گیری مقاومت در برابر تغییر (به عنوان مثال، از طریق نظرسنجی).",
+      "ذی‌نفعان می‌توانند «چرا»ی پشت تغییر را به وضوح بیان کنند.",
+      "شواهد مستند از یک برنامه مدیریت تغییر که شامل ارتباطات، آموزش و تقویت است.",
+      "تأثیر مثبت تغییر بر معیارهای تحویل (مانند زمان عرضه به بازار) نشان داده شده است."
     ],
-    "resourcesNeeded": { "time": "3-5 hours per week for learning and experimentation", "budget": "£1,000-3,000 / $1,200-3,600 annually", "tools": ["AI tool subscriptions", "Pilot program budget"], "support": "IT approval for tool adoption, budget for pilots" },
-    "realStoryExample": { "persona": "Kai, Senior ADM at Cloud Services Company", "challenge": "Documentation taking 5 hours per week, retrospective summaries 2 hours, competitive pressure to adopt AI", "action": "Piloted AI tools: GitHub Copilot for developers, ChatGPT for documentation, measured impact rigorously", "result": "Coding productivity up 28%, documentation time reduced 60%, team morale improved, expanded to 50 teams", "skillsUsed": ["AI Adoption", "Change Management", "Measurement", "Technology Evaluation"] },
+    "resourcesNeeded": { "time": "۵-۱۰ ساعت در هفته در طول یک ابتکار تغییر", "budget": "۱,۰۰۰-۲,۵۰۰ پوند / ۱,۲۰۰-۳,۰۰۰ دلار", "tools": ["چارچوب‌های مدیریت تغییر", "ابزارهای نظرسنجی", "پلتفرم‌های ارتباطی"], "support": "حمایت اجرایی و همکاری با منابع انسانی" },
+    "realStoryExample": { "persona": "النا، مدیر تحویل", "challenge": "سازمان در حال گذار از تیم‌های سیلویی به تیم‌های محصول متقابل عملکردی بود، اما با مقاومت شدید مدیران میانی و سردرگمی مهندسان روبرو بود.", "action": "یک برنامه مدیریت تغییر را با استفاده از مدل ADKAR اجرا کرد: ایجاد آگاهی (Awareness) از طریق جلسات عمومی، ایجاد تمایل (Desire) با به اشتراک گذاشتن داستان‌های موفقیت، ارائه دانش (Knowledge) از طریق آموزش، و تقویت (Reinforcement) از طریق به روز رسانی ساختارهای شغلی.", "result": "گذار طی ۶ ماه با حداقل اختلال تکمیل شد، رضایت کارکنان ۲۵٪ افزایش یافت و همکاری بین عملکردی به یک نقطه قوت تبدیل شد.", "skillsUsed": ["مدیریت تغییر", "ارتباطات استراتژیک", "مدیریت ذی‌نفعان", "همدلی"] },
     "commonMistakes": [
-      "Adopting AI without understanding use cases or measuring impact",
-      "Not addressing team concerns about AI (job security fears)",
-      "Ignoring AI ethics and responsible use considerations",
-      "Using AI as replacement for human judgment in critical decisions",
-      "Not staying current with rapidly evolving AI landscape"
+      "تمرکز تنها بر جنبه فرآیندی تغییر و نادیده گرفتن جنبه انسانی.",
+      "عدم ارتباط کافی در مورد «چرا»ی پشت تغییر.",
+      "نادیده گرفتن یا مجازات کردن مقاومت کنندگان به جای درک نگرانی‌های آنها.",
+      "عدم داشتن یک حامی اجرایی قوی و قابل مشاهده.",
+      "اعلام پیروزی خیلی زود قبل از اینکه تغییر واقعاً جا بیفتد."
     ],
     "interviewQuestions": [
-      "How are you using or planning to use AI in delivery management?",
-      "What AI tools have you experimented with? What did you learn?",
-      "How do you evaluate whether to adopt emerging technologies?",
-      "What concerns do you have about AI in delivery, and how would you address them?"
+      "رویکرد شما برای معرفی یک تغییر بزرگ در فرآیند به یک تیم یا سازمان چیست؟",
+      "چگونه مقاومت در برابر تغییر را مدیریت می‌کنید؟",
+      "مراحل مدل تغییر ADKAR چیست؟",
+      "زمانی را توصیف کنید که یک ابتکار تغییر شکست خورد. چه درس‌هایی آموختید؟"
     ]
-  }
+  },
 ];
 
 export const careerLevels: CareerLevel[] = [

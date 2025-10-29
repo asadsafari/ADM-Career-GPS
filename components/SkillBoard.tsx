@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Skill } from '../types';
 import { ChevronDownIcon } from './Icons';
@@ -33,22 +34,22 @@ export const SkillBoard: React.FC<SkillBoardProps> = ({ skills, selectedSkill, o
   };
 
   return (
-    <aside className="w-full md:w-80 lg:w-96 flex-shrink-0 bg-white border-b md:border-b-0 md:border-r border-slate-200 p-4 md:h-[calc(100vh-89px)] md:sticky md:top-[89px]">
+    <aside className="w-full md:w-80 lg:w-96 flex-shrink-0 bg-white border-b md:border-b-0 md:border-l border-slate-200 p-4 md:h-[calc(100vh-89px)] md:sticky md:top-[89px]" dir="rtl">
       <div className="h-full overflow-y-auto">
-        <h2 className="text-lg font-bold text-text-primary mb-4 px-2">Skill Wiki</h2>
+        <h2 className="text-lg font-bold text-text-primary mb-4 px-2 text-right">ویکی مهارت‌ها</h2>
         <nav>
           <ul>
             {categories.map(category => (
               <li key={category} className="mb-2">
                 <button 
                   onClick={() => toggleCategory(category)}
-                  className="w-full flex justify-between items-center text-left font-semibold text-brand-primary p-2 rounded-md hover:bg-slate-100"
+                  className="w-full flex justify-between items-center text-right font-semibold text-brand-primary p-2 rounded-md hover:bg-slate-100"
                 >
                   <span>{category}</span>
                   <ChevronDownIcon className={`w-5 h-5 transition-transform ${openCategories.includes(category) ? 'rotate-180' : ''}`} />
                 </button>
                 {openCategories.includes(category) && (
-                  <ul className="pl-4 mt-1 border-l-2 border-brand-secondary/20">
+                  <ul className="pr-4 mt-1 border-r-2 border-l-0 border-brand-secondary/20">
                     {skillsByCategory[category].map(skill => (
                       <li key={skill.skillName}>
                         <a

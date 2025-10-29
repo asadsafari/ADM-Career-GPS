@@ -1,3 +1,4 @@
+
 import React, { useState, useCallback } from 'react';
 import { Header } from './components/Header';
 import { SkillBoard } from './components/SkillBoard';
@@ -32,14 +33,14 @@ const App: React.FC = () => {
         case 'wiki':
             return (
               <>
+                <main className="flex-1 w-full p-4 md:p-8">
+                    <SkillModal key={selectedSkill?.skillName} skill={selectedSkill} />
+                </main>
                 <SkillBoard
                     skills={allSkills}
                     selectedSkill={selectedSkill}
                     onSkillSelect={handleSkillSelect}
                 />
-                <main className="flex-1 w-full p-4 md:p-8">
-                    <SkillModal key={selectedSkill?.skillName} skill={selectedSkill} />
-                </main>
               </>
             );
         case 'charter':

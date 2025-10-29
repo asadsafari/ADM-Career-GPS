@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 type ViewType = 'wiki' | 'plan' | 'progress' | 'monteCarlo' | 'charter' | 'psychSafety' | 'coaching' | 'conflict';
@@ -24,33 +25,33 @@ export const Header: React.FC<HeaderProps> = ({ view, onViewChange }) => {
           ADM Career GPS
         </h1>
         <p className="text-text-secondary mt-1 text-sm md:text-base">
-          Your Interactive Guide to Agile Delivery Management Mastery
+          راهنمای تعاملی شما برای تسلط بر مدیریت تحویل چابک
         </p>
       </div>
       
       <div className="flex items-center gap-4">
          <div className="flex items-center gap-2 bg-slate-100 p-1 rounded-lg flex-wrap justify-start md:justify-end">
-           <button onClick={() => onViewChange('wiki')} className={getButtonClass('wiki')}>Skill Wiki</button>
-           <button onClick={() => onViewChange('charter')} className={getButtonClass('charter')}>Agile Charter</button>
-           <button onClick={() => onViewChange('plan')} className={getButtonClass('plan')}>Example Delivery Plan</button>
-           <button onClick={() => onViewChange('progress')} className={getButtonClass('progress')}>Track Progress</button>
-           <button onClick={() => onViewChange('monteCarlo')} className={getButtonClass('monteCarlo')}>Monte Carlo Simulator</button>
+           <button onClick={() => onViewChange('wiki')} className={getButtonClass('wiki')}>ویکی مهارت‌ها</button>
+           <button onClick={() => onViewChange('charter')} className={getButtonClass('charter')}>منشور چابک</button>
+           <button onClick={() => onViewChange('plan')} className={getButtonClass('plan')}>نمونه برنامه تحویل</button>
+           <button onClick={() => onViewChange('progress')} className={getButtonClass('progress')}>پیگیری پیشرفت</button>
+           <button onClick={() => onViewChange('monteCarlo')} className={getButtonClass('monteCarlo')}>شبیه‌ساز مونت کارلو</button>
            <button onClick={() => onViewChange('psychSafety')} className={getButtonClass('psychSafety')}>ایجاد امنیت روانی</button>
            <button onClick={() => onViewChange('coaching')} className={getButtonClass('coaching')}>کوچینگ تیم‌ها</button>
            <button onClick={() => onViewChange('conflict')} className={getButtonClass('conflict')}>مدیریت تعارضات</button>
          </div>
 
-        <div className="hidden lg:block text-right border-l border-slate-200 pl-4 ml-2">
+        <div className="hidden lg:block text-right border-l border-slate-200 pl-4 ml-2" dir="rtl">
             <p className="text-xs text-text-secondary">
-            A project by
+            پروژه‌ای از
             </p>
             <p className="text-sm font-semibold text-brand-secondary">
             <a href="https://scrum.ir" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                Scrum.ir / Asad Safari
+                اسکرام ایران / اسد صفری
             </a>
             </p>
             <p className="text-xs text-text-secondary mt-1">
-            Released under the MIT License.
+            منتشر شده تحت مجوز MIT.
             </p>
         </div>
       </div>

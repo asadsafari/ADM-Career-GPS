@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { getNote, saveNote } from '../utils/storage';
 import { useDebounce } from '../hooks/useDebounce';
@@ -41,16 +42,16 @@ export const NoteTaker: React.FC<NoteTakerProps> = ({ noteKey }) => {
 
   const getStatusText = () => {
     switch (saveStatus) {
-      case 'saving': return 'Saving...';
-      case 'saved': return 'Saved ✓';
+      case 'saving': return 'در حال ذخیره...';
+      case 'saved': return 'ذخیره شد ✓';
       default: return null;
     }
   };
 
   return (
-    <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg shadow-inner">
+    <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg shadow-inner" dir="rtl">
       <div className="flex justify-between items-center mb-2">
-        <h4 className="font-semibold text-sm text-yellow-900">Your Personal Notes</h4>
+        <h4 className="font-semibold text-sm text-yellow-900">یادداشت‌های شخصی شما</h4>
         <span className="text-xs text-yellow-800 italic transition-opacity duration-300 h-4">
           {getStatusText()}
         </span>
@@ -60,9 +61,9 @@ export const NoteTaker: React.FC<NoteTakerProps> = ({ noteKey }) => {
           value={note}
           onChange={(e) => setNote(e.target.value)}
           onBlur={() => setIsEditing(note.trim().length === 0)}
-          placeholder="Add your notes, reflections, or action items here. Notes are saved automatically."
-          className="w-full h-28 p-2 bg-white border border-yellow-300 rounded-md focus:ring-1 focus:ring-yellow-500 focus:border-yellow-500 text-sm text-text-secondary transition"
-          aria-label="Personal notes"
+          placeholder="یادداشت‌ها، بازخوردها یا موارد اقدام خود را اینجا اضافه کنید. یادداشت‌ها به صورت خودکار ذخیره می‌شوند."
+          className="w-full h-28 p-2 bg-white border border-yellow-300 rounded-md focus:ring-1 focus:ring-yellow-500 focus:border-yellow-500 text-sm text-text-secondary transition text-right"
+          aria-label="یادداشت‌های شخصی"
           autoFocus
         />
       ) : (

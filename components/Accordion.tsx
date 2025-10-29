@@ -15,13 +15,13 @@ export const Accordion: React.FC<AccordionProps> = ({ title, children, defaultOp
     <div className="border-b border-slate-200">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center py-4 text-left text-lg font-semibold text-text-primary"
+        className="w-full flex justify-between items-center py-4 text-right text-lg font-semibold text-text-primary"
       >
         <span>{title}</span>
         <ChevronDownIcon className={`w-6 h-6 transform transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </button>
       {isOpen && (
-        <div className="pb-4 pr-6 text-text-secondary">
+        <div className="pb-4 pl-6 text-text-secondary">
           {children}
         </div>
       )}
