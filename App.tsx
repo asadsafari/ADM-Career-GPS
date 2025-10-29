@@ -1,4 +1,3 @@
-
 import React, { useState, useCallback } from 'react';
 import { Header } from './components/Header';
 import { SkillBoard } from './components/SkillBoard';
@@ -6,10 +5,14 @@ import { SkillModal } from './components/SkillModal';
 import { DeliveryPlan } from './components/DeliveryPlan';
 import { MonteCarloSimulator } from './components/MonteCarloSimulator';
 import { ReleaseTracker } from './components/ReleaseTracker';
+import { AgileCharter } from './components/AgileCharter';
+import { PsychologicalSafety } from './components/PsychologicalSafety';
+import { TeamCoaching } from './components/TeamCoaching';
+import { ConflictResolution } from './components/ConflictResolution';
 import { allSkills } from './data';
 import { Skill } from './types';
 
-type ViewType = 'wiki' | 'plan' | 'progress' | 'monteCarlo';
+type ViewType = 'wiki' | 'plan' | 'progress' | 'monteCarlo' | 'charter' | 'psychSafety' | 'coaching' | 'conflict';
 
 const App: React.FC = () => {
   const [selectedSkill, setSelectedSkill] = useState<Skill | null>(allSkills[0]);
@@ -21,6 +24,7 @@ const App: React.FC = () => {
   
   const handleViewChange = useCallback((newView: ViewType) => {
     setView(newView);
+    window.scrollTo(0, 0);
   }, []);
 
   const renderMainContent = () => {
@@ -38,6 +42,12 @@ const App: React.FC = () => {
                 </main>
               </>
             );
+        case 'charter':
+            return (
+                <main className="flex-1 w-full p-4 md:p-8">
+                    <AgileCharter />
+                </main>
+            );
         case 'plan':
             return (
                 <main className="flex-1 w-full p-4 md:p-8">
@@ -54,6 +64,24 @@ const App: React.FC = () => {
             return (
                 <main className="flex-1 w-full p-4 md:p-8">
                     <MonteCarloSimulator />
+                </main>
+            );
+        case 'psychSafety':
+            return (
+                <main className="flex-1 w-full p-4 md:p-8">
+                    <PsychologicalSafety />
+                </main>
+            );
+        case 'coaching':
+            return (
+                <main className="flex-1 w-full p-4 md:p-8">
+                    <TeamCoaching />
+                </main>
+            );
+        case 'conflict':
+            return (
+                <main className="flex-1 w-full p-4 md:p-8">
+                    <ConflictResolution />
                 </main>
             );
         default:
