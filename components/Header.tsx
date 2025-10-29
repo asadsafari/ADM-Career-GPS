@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-type ViewType = 'wiki' | 'plan' | 'monteCarlo';
+type ViewType = 'wiki' | 'plan' | 'progress' | 'monteCarlo';
 
 interface HeaderProps {
     view: ViewType;
@@ -33,6 +33,7 @@ export const Header: React.FC<HeaderProps> = ({ view, onViewChange }) => {
          <div className="flex items-center gap-2 bg-slate-100 p-1 rounded-lg">
            <button onClick={() => onViewChange('wiki')} className={getButtonClass('wiki')}>Skill Wiki</button>
            <button onClick={() => onViewChange('plan')} className={getButtonClass('plan')}>Example Delivery Plan</button>
+           <button onClick={() => onViewChange('progress')} className={getButtonClass('progress')}>Track Progress</button>
            <button onClick={() => onViewChange('monteCarlo')} className={getButtonClass('monteCarlo')}>Monte Carlo Simulator</button>
          </div>
 
